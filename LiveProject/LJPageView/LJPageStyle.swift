@@ -15,4 +15,9 @@ struct LJPageStyle {
     var titleFont : UIFont = UIFont.systemFont(ofSize: 14.0)
     var isScrollEnable: Bool = false
     var titleMargin : CGFloat = 20.0
+    var isShowBottomLine: Bool = true
+    var bottomLineColor : UIColor = .orange
+    var bottomLineHeight : CGFloat = 2.0
+    var isNeedScale : Bool = false
+    var maxScale : CGFloat = 1.2
 }
