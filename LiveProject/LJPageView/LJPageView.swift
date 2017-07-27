@@ -36,7 +36,7 @@ extension LJPageView {
     fileprivate func setupUI() {
         let titleFrame = CGRect(x: 0, y: 0, width: bounds.width, height: style.titleHeight)
         let titleView = LJTitleView(frame: titleFrame, titles: titles, style: style)
-        titleView.backgroundColor = UIColor(hexString: "00FF00")
+        titleView.backgroundColor = UIColor(hexString: "0000FF")
         addSubview(titleView)
         
         let contentFrame = CGRect(x: 0, y: style.titleHeight, width: bounds.width, height: bounds.height - style.titleHeight)
@@ -44,6 +44,8 @@ extension LJPageView {
         contentView.backgroundColor = .blue
         addSubview(contentView)
         
+        titleView.delegate = contentView
+        contentView.delegate = titleView
         
     }
 }

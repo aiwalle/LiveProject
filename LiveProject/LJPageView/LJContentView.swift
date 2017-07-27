@@ -10,10 +10,18 @@ import UIKit
 
 private let kContentCellID = "kContentCellID"
 
-class LJContentView: UIView {
+protocol LJContentViewDelegate: class {
+    func contentView(_ contentView: LJContentView, didEndScroll inIndex: Int)
+    func contentView(_ contentView: LJContentView, sourceIndex: Int, targetIndex: Int, progress: CGFloat)
+}
 
+class LJContentView: UIView {
+    weak var delegate: LJContentViewDelegate?
+    
     fileprivate var childVcs: [UIViewController]
     fileprivate var parentVc: UIViewController
+    fileprivate var startOffset : CGFloat = 0
+    fileprivate var isForbidDelegate : Bool = false
     // 如果闭包中用到当前对象的属性，那么self不能省略
     fileprivate lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -78,5 +86,64 @@ extension LJContentView : UICollectionViewDelegate {
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        
 //    }
+    
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewDidEndScroll(scrollView)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            scrollViewDidEndScroll(scrollView)
+        }
+    }
+    
+    func scrollViewDidEndScroll(_ scrollView: UIScrollView) {
+        let index = collectionView.contentOffset.x / collectionView.bounds.width
+        delegate?.contentView(self, didEndScroll: Int(index))
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isForbidDelegate = false
+        startOffset = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetX = scrollView.contentOffset.x
+        guard contentOffsetX != startOffset && !isForbidDelegate else {
+            return
+        }
+        var sourceIndex = 0
+        var targetIndex = 0
+        var progress: CGFloat = 0
+        let collectionWidth = collectionView.bounds.width
+        if contentOffsetX > startOffset { // 左滑
+            sourceIndex = Int(contentOffsetX / collectionWidth)
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVcs.count {
+                targetIndex = childVcs.count - 1
+            }
+            progress = (contentOffsetX - startOffset) / collectionWidth
+            if (contentOffsetX - startOffset) == collectionWidth {
+                targetIndex = sourceIndex
+            }
+        } else {                          // 右滑
+            targetIndex = Int(contentOffsetX / collectionWidth)
+            sourceIndex = targetIndex + 1
+            progress = (startOffset - contentOffsetX) / collectionWidth
+        }
+//        print("sourceIndex:\(sourceIndex) targetIndex:\(targetIndex) progress:\(progress)")
+        
+        delegate?.contentView(self, sourceIndex: sourceIndex, targetIndex: targetIndex, progress: progress)
+    }
+}
+
+extension LJContentView : LJTitleViewDelegate {
+    func titleView(_ titleView: LJTitleView, targetIndex: Int) {
+//        print(targetIndex)
+        isForbidDelegate = true
+        let indexPath = IndexPath(item: targetIndex, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+    }
 }
 
