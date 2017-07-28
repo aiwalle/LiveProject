@@ -8,9 +8,16 @@
 
 import UIKit
 
+protocol LJWaterFallLayoutDataSource : class {
+    func waterFallLayout(_ layout : LJWaterFallLayout, itemIndex : Int) -> CGFloat
+}
+
 class LJWaterFallLayout: UICollectionViewFlowLayout {
+    var cols : Int = 2
+    weak var dataSource : LJWaterFallLayoutDataSource?
     fileprivate lazy var attributes : [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
     fileprivate lazy var maxHeight : CGFloat = self.sectionInset.top + self.sectionInset.bottom
+    fileprivate lazy var heights : [CGFloat] = Array(repeating: self.sectionInset.top, count: self.cols)
 }
 
 extension LJWaterFallLayout {
@@ -19,30 +26,31 @@ extension LJWaterFallLayout {
         
         guard let collectionView = self.collectionView else { return }
         
-        // 获取cell对应的attributes
+        // 获取cell对应的attributes --> 一个cell对应一个attribute
         let cellCount = collectionView.numberOfItems(inSection: 0)
         
-        let colNumber = 2
+        let colNumber = cols
         let itemW = (collectionView.bounds.width - sectionInset.left - sectionInset.right - (CGFloat(colNumber) - 1) * minimumInteritemSpacing) / CGFloat(colNumber)
         
-        var heights : [CGFloat] = Array(repeating: sectionInset.top, count: colNumber)
-        
-        for i in 0..<cellCount {
+        for i in attributes.count..<cellCount {
             let indexPath = IndexPath(item: i, section: 0)
             let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             
-            let itemH = arc4random_uniform(150) + 50
+            guard let itemH = dataSource?.waterFallLayout(self, itemIndex: i) else {
+                fatalError("请设置数据源")
+            }
+
             let minH = heights.min()!
             let minIndex = heights.index(of: minH)!
             
             let itemX = sectionInset.left + (minimumInteritemSpacing + itemW) * CGFloat(minIndex)
-            let itemY = minH + minimumLineSpacing
+            let itemY = minH
             
             attribute.frame = CGRect(x: itemX, y: itemY, width: itemW, height: CGFloat(itemH))
             attributes.append(attribute)
-            heights[minIndex] = attribute.frame.maxY
+            heights[minIndex] = attribute.frame.maxY + minimumLineSpacing
         }
-        maxHeight = heights.max()!
+        maxHeight = heights.max()! - minimumLineSpacing
     }
 }
 

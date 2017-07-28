@@ -10,12 +10,15 @@ import UIKit
 private let kViewControllerCellID = "kViewControllerCellID"
 
 class ViewController: UIViewController {
-
+    fileprivate var itemCount = 15
+    
     fileprivate lazy var collectionView : UICollectionView = {
         let layout = LJWaterFallLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
+        layout.cols = 2
+        layout.dataSource = self
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout:layout )
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kViewControllerCellID)
@@ -69,17 +72,28 @@ class ViewController: UIViewController {
 
 extension ViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return itemCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kViewControllerCellID, for: indexPath)
         cell.backgroundColor = UIColor.getRandomColor()
+        if indexPath.item == itemCount - 1 {
+            itemCount += 30
+            collectionView.reloadData()
+        }
         return cell
     }
 }
 
 extension ViewController : UICollectionViewDelegate {
     
+}
+
+extension ViewController : LJWaterFallLayoutDataSource {
+    func waterFallLayout(_ layout: LJWaterFallLayout, itemIndex: Int) -> CGFloat {
+        let screenW = UIScreen.main.bounds.width
+        return itemIndex % 2 == 0 ? screenW * 2 / 3 : screenW * 0.5
+    }
 }
 
