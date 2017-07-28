@@ -41,6 +41,14 @@ class LJTitleView: UIView {
         return bottomLine
     }()
     
+    fileprivate lazy var coverView : UIView = {
+        let coverView = UIView()
+        coverView.backgroundColor = self.style.coverViewColor
+        coverView.alpha = self.style.coverViewAlpha
+        
+        return coverView
+    }()
+    
     init(frame: CGRect, titles: [String], style: LJPageStyle) {
         self.titles = titles
         self.style = style
@@ -63,6 +71,29 @@ extension LJTitleView {
         if style.isShowBottomLine {
             setupBottomLine()
         }
+        if style.isShowCoverView {
+            setupCoverView()
+        }
+    }
+    
+    private func setupCoverView() {
+//        scrollView.addSubview(coverView)
+        scrollView.insertSubview(coverView, at: 0)
+        guard let firstLabel = titleLabels.first else { return }
+        var coverViewX = firstLabel.frame.origin.x
+        let coverViewH = style.coverViewHeight
+        let coverViewY = (firstLabel.bounds.height - coverViewH) * 0.5
+        var coverViewW = firstLabel.frame.width
+        
+        if style.isScrollEnable {
+            coverViewX -= style.coverViewMargin
+            coverViewW += style.coverViewMargin * 2
+        }
+        
+        coverView.frame = CGRect(x: coverViewX, y: coverViewY, width: coverViewW, height: coverViewH)
+        coverView.layer.cornerRadius = style.coverViewRadius
+        coverView.layer.masksToBounds = true
+        
     }
     
     private func setupBottomLine() {
@@ -133,6 +164,13 @@ extension LJTitleView {
         
         delegate?.titleView(self, targetIndex: currentIndex)
         
+        if style.isNeedScale {
+            UIView.animate(withDuration: 0.25, animations: {
+                sourceLabel.transform = CGAffineTransform.identity
+                targetLabel.transform = CGAffineTransform(scaleX: self.style.maxScale, y: self.style.maxScale)
+            })
+        }
+        
         if style.isShowBottomLine {
             UIView.animate(withDuration: 0.25) {
                 self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
@@ -140,15 +178,20 @@ extension LJTitleView {
             }
         }
         
-        if style.isNeedScale {
+        if style.isShowCoverView {
             UIView.animate(withDuration: 0.25, animations: { 
-                sourceLabel.transform = CGAffineTransform.identity
-                targetLabel.transform = CGAffineTransform(scaleX: self.style.maxScale, y: self.style.maxScale)
+                self.coverView.frame.origin.x = self.style.isScrollEnable ? targetLabel.frame.origin.x - self.style.coverViewMargin : targetLabel.frame.origin.x
+                self.coverView.frame.size.width = self.style.isScrollEnable ? (targetLabel.frame.width + 2 * self.style.coverViewMargin) : targetLabel.frame.width
             })
         }
+        
     }
     
     fileprivate func adjustLabelPosition() {
+        guard style.isScrollEnable else {
+            return
+        }
+        
         let targetLabel = titleLabels[currentIndex]
         var offsetX = targetLabel.center.x - scrollView.bounds.width * 0.5
         if offsetX < 0 {
@@ -176,19 +219,26 @@ extension LJTitleView : LJContentViewDelegate {
         sourceLabel.textColor = UIColor(r: selectRGB.0 - deltaRGB.0 * progress, g: selectRGB.1 - deltaRGB.1 * progress, b: selectRGB.2 - deltaRGB.2 * progress)
         targetLabel.textColor = UIColor(r: normalRGB.0 + deltaRGB.0 * progress, g: normalRGB.1 + deltaRGB.1 * progress, b: normalRGB.2 + deltaRGB.2 * progress)
         
-        if style.isShowBottomLine {
-            let deltaWidth = targetLabel.frame.width - sourceLabel.frame.width
-            let deltaX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
-            bottomLine.frame.size.width = deltaWidth * progress + sourceLabel.frame.width
-            bottomLine.frame.origin.x = deltaX * progress + sourceLabel.frame.origin.x
-            
-        }
-        
         if style.isNeedScale {
             let deltaScale = style.maxScale - 1.0
             sourceLabel.transform = CGAffineTransform(scaleX: style.maxScale - deltaScale * progress, y: style.maxScale - deltaScale * progress)
             targetLabel.transform = CGAffineTransform(scaleX: 1.0 + deltaScale * progress, y: 1.0 + deltaScale * progress)
         }
+        
+        let deltaWidth = targetLabel.frame.width - sourceLabel.frame.width
+        let deltaX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        if style.isShowBottomLine {
+            
+            bottomLine.frame.size.width = deltaWidth * progress + sourceLabel.frame.width
+            bottomLine.frame.origin.x = deltaX * progress + sourceLabel.frame.origin.x
+            
+        }
+        
+        if style.isShowCoverView {
+            coverView.frame.origin.x = style.isScrollEnable ? (sourceLabel.frame.origin.x - style.coverViewMargin + deltaX * progress) : (sourceLabel.frame.origin.x + deltaX * progress)
+            coverView.frame.size.width = style.isScrollEnable ? (sourceLabel.frame.width + style.coverViewMargin * 2 + deltaWidth * progress) : (sourceLabel.frame.width + deltaWidth * progress)
+        }
+        
     }
     
 

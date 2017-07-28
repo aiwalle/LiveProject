@@ -49,10 +49,29 @@ extension UIColor {
 }
 
 extension UIColor {
+    // 系统有直接的方法可以获得RGB
+    /*
+     getRed(_ red: UnsafeMutablePointer<CGFloat>?, green: UnsafeMutablePointer<CGFloat>?, blue: UnsafeMutablePointer<CGFloat>?, alpha: UnsafeMutablePointer<CGFloat>?) -> Bool
+    */
+    
+    
     func getRGBValue() -> (CGFloat, CGFloat, CGFloat) {
-        guard let cmps = cgColor.components else {
-            fatalError("请确定该颜色是通过RGB创建的")
-        }
-        return (cmps[0] * 255, cmps[1] * 255, cmps[2] * 255)
+        // 下面的旧方法就不使用了
+//        guard let cmps = cgColor.components else {
+//            fatalError("请确定该颜色是通过RGB创建的")
+//        }
+//        return (cmps[0] * 255, cmps[1] * 255, cmps[2] * 255)
+        
+        var red : CGFloat = 0
+        var green : CGFloat = 0
+        var blue : CGFloat = 0
+        
+        getRed(&red, green: &green, blue: &blue, alpha: nil)
+        
+        return (red * 255, green * 255, blue * 255)
     }
+    
+    
+    
+    
 }

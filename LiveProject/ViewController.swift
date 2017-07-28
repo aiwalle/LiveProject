@@ -23,6 +23,8 @@ class ViewController: UIViewController {
             childVcs.append(vc)
         }
         var style = LJPageStyle()
+        style.isShowBottomLine = true
+        style.isShowCoverView = true
         style.isScrollEnable = true
         style.isNeedScale = true
         let pageView = LJPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVcs, parentVc: self)
