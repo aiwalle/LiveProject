@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971D3D9A1F2B380B0068A3F0 /* LJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3D991F2B380B0068A3F0 /* LJTabBarController.swift */; };
+		971D3D9E1F2B3D820068A3F0 /* LJHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3D9D1F2B3D820068A3F0 /* LJHomeController.swift */; };
+		971D3DA01F2B3D930068A3F0 /* LJRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3D9F1F2B3D930068A3F0 /* LJRankController.swift */; };
+		971D3DA21F2B3DA30068A3F0 /* LJFoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3DA11F2B3DA30068A3F0 /* LJFoundController.swift */; };
+		971D3DA41F2B3DC10068A3F0 /* LJMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3DA31F2B3DC10068A3F0 /* LJMineController.swift */; };
 		973CA7431F287AF3000DE48D /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CA7421F287AF3000DE48D /* UIColor-Extension.swift */; };
 		978F90A01F271EF9002624BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F909F1F271EF9002624BE /* AppDelegate.swift */; };
 		978F90A21F271EF9002624BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90A11F271EF9002624BE /* ViewController.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		971D3D991F2B380B0068A3F0 /* LJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTabBarController.swift; sourceTree = "<group>"; };
+		971D3D9D1F2B3D820068A3F0 /* LJHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJHomeController.swift; sourceTree = "<group>"; };
+		971D3D9F1F2B3D930068A3F0 /* LJRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRankController.swift; sourceTree = "<group>"; };
+		971D3DA11F2B3DA30068A3F0 /* LJFoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJFoundController.swift; sourceTree = "<group>"; };
+		971D3DA31F2B3DC10068A3F0 /* LJMineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJMineController.swift; sourceTree = "<group>"; };
 		973CA7421F287AF3000DE48D /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		978F909C1F271EF9002624BE /* LiveProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		978F909F1F271EF9002624BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +83,11 @@
 				978F909F1F271EF9002624BE /* AppDelegate.swift */,
 				973CA7421F287AF3000DE48D /* UIColor-Extension.swift */,
 				978F90A11F271EF9002624BE /* ViewController.swift */,
+				971D3D991F2B380B0068A3F0 /* LJTabBarController.swift */,
+				971D3D9D1F2B3D820068A3F0 /* LJHomeController.swift */,
+				971D3D9F1F2B3D930068A3F0 /* LJRankController.swift */,
+				971D3DA31F2B3DC10068A3F0 /* LJMineController.swift */,
+				971D3DA11F2B3DA30068A3F0 /* LJFoundController.swift */,
 				978F90D31F27298E002624BE /* TestSwiftController.swift */,
 				978F90A31F271EF9002624BE /* Main.storyboard */,
 				978F90A61F271EF9002624BE /* Assets.xcassets */,
@@ -179,10 +194,15 @@
 				978F90A21F271EF9002624BE /* ViewController.swift in Sources */,
 				978F90E11F273614002624BE /* LJPageStyle.swift in Sources */,
 				978F90DF1F273319002624BE /* LJContentView.swift in Sources */,
+				971D3D9A1F2B380B0068A3F0 /* LJTabBarController.swift in Sources */,
 				97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */,
+				971D3DA01F2B3D930068A3F0 /* LJRankController.swift in Sources */,
+				971D3DA41F2B3DC10068A3F0 /* LJMineController.swift in Sources */,
 				978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */,
+				971D3D9E1F2B3D820068A3F0 /* LJHomeController.swift in Sources */,
 				978F90A01F271EF9002624BE /* AppDelegate.swift in Sources */,
 				978F90D41F27298E002624BE /* TestSwiftController.swift in Sources */,
+				971D3DA21F2B3DA30068A3F0 /* LJFoundController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
