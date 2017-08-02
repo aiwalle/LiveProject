@@ -13,23 +13,27 @@ class LJHomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupPageView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    fileprivate func setupPageView() {
+        automaticallyAdjustsScrollViewInsets = false
+        let pageFrame = CGRect(x: 0, y: 64, width: view.bounds.width, height: view.bounds.height - 64)
+        //        let titles = ["推荐", "游戏推荐", "娱乐推", "天天"]
+        let titles = ["推荐", "游戏推荐", "娱乐推", "哈哈哈哈哈荐","呵呵呵", "科技推", "娱乐推荐推荐"]
+        var childVcs = [UIViewController]()
+        for _ in 0..<titles.count {
+            let vc = ViewController()
+            vc.view.backgroundColor = UIColor.getRandomColor()
+            childVcs.append(vc)
+        }
+        var style = LJPageStyle()
+        style.isShowBottomLine = true
+        style.isShowCoverView = true
+        style.isScrollEnable = true
+        style.isNeedScale = true
+        let pageView = LJPageView(frame: pageFrame, titles: titles, style: style, childVcs: childVcs, parentVc: self)
+        view.addSubview(pageView)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

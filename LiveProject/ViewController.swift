@@ -87,7 +87,9 @@ extension ViewController : UICollectionViewDataSource {
 }
 
 extension ViewController : UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(ViewController(), animated: true)
+    }
 }
 
 extension ViewController : LJWaterFallLayoutDataSource {

@@ -47,7 +47,7 @@ extension LJTabBarController {
     }
     
     fileprivate func addChildVc(_ childVc : UIViewController, title : String, normalImage : String, selectedImage: String) {
-        let nav = UINavigationController(rootViewController: childVc)
+        let nav = LJNavigationCotroller(rootViewController: childVc)
         nav.tabBarItem.title = title
         nav.tabBarItem.image = UIImage(named: normalImage)
         nav.tabBarItem.selectedImage = UIImage(named: selectedImage)
