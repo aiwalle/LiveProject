@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E07CB424B84476A34193FCC /* Pods_LiveProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005E16C739F13FA2F6FCEB9F /* Pods_LiveProject.framework */; };
 		971D3D9A1F2B380B0068A3F0 /* LJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3D991F2B380B0068A3F0 /* LJTabBarController.swift */; };
 		971D3D9E1F2B3D820068A3F0 /* LJHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3D9D1F2B3D820068A3F0 /* LJHomeController.swift */; };
 		971D3DA01F2B3D930068A3F0 /* LJRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D3D9F1F2B3D930068A3F0 /* LJRankController.swift */; };
@@ -28,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005E16C739F13FA2F6FCEB9F /* Pods_LiveProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41BC208B8661AFC62651B31A /* Pods-LiveProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject.release.xcconfig"; sourceTree = "<group>"; };
+		6C459D136A2B0A2D329AB93E /* Pods-LiveProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject.debug.xcconfig"; sourceTree = "<group>"; };
 		971D3D991F2B380B0068A3F0 /* LJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTabBarController.swift; sourceTree = "<group>"; };
 		971D3D9D1F2B3D820068A3F0 /* LJHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJHomeController.swift; sourceTree = "<group>"; };
 		971D3D9F1F2B3D930068A3F0 /* LJRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRankController.swift; sourceTree = "<group>"; };
@@ -55,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E07CB424B84476A34193FCC /* Pods_LiveProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193BD182C53D641D2E90F6B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				005E16C739F13FA2F6FCEB9F /* Pods_LiveProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		978F90931F271EF8002624BE = {
 			isa = PBXGroup;
 			children = (
 				978F909E1F271EF9002624BE /* LiveProject */,
 				978F909D1F271EF9002624BE /* Products */,
+				CE1B4FD012C4D167B329FC2C /* Pods */,
+				193BD182C53D641D2E90F6B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +134,15 @@
 			path = LJWaterFallView;
 			sourceTree = "<group>";
 		};
+		CE1B4FD012C4D167B329FC2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C459D136A2B0A2D329AB93E /* Pods-LiveProject.debug.xcconfig */,
+				41BC208B8661AFC62651B31A /* Pods-LiveProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978F90AE1F271EF9002624BE /* Build configuration list for PBXNativeTarget "LiveProject" */;
 			buildPhases = (
+				051D827CA7881883052AAC4A /* [CP] Check Pods Manifest.lock */,
 				978F90981F271EF9002624BE /* Sources */,
 				978F90991F271EF9002624BE /* Frameworks */,
 				978F909A1F271EF9002624BE /* Resources */,
+				3A477D136298DFFEB33AFBFD /* [CP] Embed Pods Frameworks */,
+				39F8F612C63DAEB854907BEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +213,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		051D827CA7881883052AAC4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		39F8F612C63DAEB854907BEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A477D136298DFFEB33AFBFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		978F90981F271EF9002624BE /* Sources */ = {
@@ -327,6 +402,7 @@
 		};
 		978F90AF1F271EF9002624BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C459D136A2B0A2D329AB93E /* Pods-LiveProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U34P9L9V3V;
@@ -340,6 +416,7 @@
 		};
 		978F90B01F271EF9002624BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BC208B8661AFC62651B31A /* Pods-LiveProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U34P9L9V3V;
