@@ -59,6 +59,7 @@ class LJContentView: UIView {
 extension LJContentView {
     fileprivate func setupUI() {
         for childVc in childVcs {
+            childVc.view.backgroundColor = .white
             parentVc.addChildViewController(childVc)
         }
         addSubview(collectionView)

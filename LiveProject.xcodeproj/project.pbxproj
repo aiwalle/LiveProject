@@ -30,6 +30,11 @@
 		978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90DC1F2732FA002624BE /* LJTitleView.swift */; };
 		978F90DF1F273319002624BE /* LJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90DE1F273319002624BE /* LJContentView.swift */; };
 		978F90E11F273614002624BE /* LJPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90E01F273614002624BE /* LJPageStyle.swift */; };
+		97C8FA4A1F32C02D008025BC /* LJHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA491F32C02D008025BC /* LJHomeViewModel.swift */; };
+		97C8FA4C1F32C0F0008025BC /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA4B1F32C0F0008025BC /* AnchorModel.swift */; };
+		97C8FA4F1F32C6C3008025BC /* LJNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */; };
+		97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA521F32F1FB008025BC /* HomeViewCell.swift */; };
+		97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA541F33001E008025BC /* UIImageView-Extension.swift */; };
 		97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +44,7 @@
 		6C459D136A2B0A2D329AB93E /* Pods-LiveProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject.debug.xcconfig"; sourceTree = "<group>"; };
 		972BD6F51F3218BB001C6172 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		972BD6F91F321A66001C6172 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		972BD6FB1F321AF0001C6172 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
+		972BD6FB1F321AF0001C6172 /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeType.swift; path = ../HomeType.swift; sourceTree = "<group>"; };
 		972BD6FD1F321D16001C6172 /* const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = const.swift; sourceTree = "<group>"; };
 		972BD6FF1F3222BD001C6172 /* LJAnchorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJAnchorController.swift; sourceTree = "<group>"; };
 		972BD7011F32263A001C6172 /* LJHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJHomeController.swift; sourceTree = "<group>"; };
@@ -61,6 +66,11 @@
 		978F90DC1F2732FA002624BE /* LJTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTitleView.swift; sourceTree = "<group>"; };
 		978F90DE1F273319002624BE /* LJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJContentView.swift; sourceTree = "<group>"; };
 		978F90E01F273614002624BE /* LJPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJPageStyle.swift; sourceTree = "<group>"; };
+		97C8FA491F32C02D008025BC /* LJHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJHomeViewModel.swift; sourceTree = "<group>"; };
+		97C8FA4B1F32C0F0008025BC /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJNetWorkManager.swift; sourceTree = "<group>"; };
+		97C8FA521F32F1FB008025BC /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		97C8FA541F33001E008025BC /* UIImageView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
 		97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJWaterFallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +105,10 @@
 		972BD6F71F321A16001C6172 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				97C8FA511F32F1D8008025BC /* View */,
+				97C8FA471F32BFF8008025BC /* Model */,
+				97C8FA481F32BFF8008025BC /* ViewModel */,
 				972BD7011F32263A001C6172 /* LJHomeController.swift */,
-				972BD6FB1F321AF0001C6172 /* HomeType.swift */,
 				972BD6FF1F3222BD001C6172 /* LJAnchorController.swift */,
 			);
 			path = Home;
@@ -118,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				972BD70A1F3226C9001C6172 /* UIColor-Extension.swift */,
+				97C8FA541F33001E008025BC /* UIImageView-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -185,6 +198,7 @@
 				972BD70C1F3226D2001C6172 /* Found */,
 				972BD70F1F3226E6001C6172 /* Mine */,
 				972BD7091F3226C9001C6172 /* Extension */,
+				97C8FA4D1F32C6A7008025BC /* Tools */,
 				972BD7151F3226FA001C6172 /* Test */,
 				978F90A31F271EF9002624BE /* Main.storyboard */,
 				978F90A61F271EF9002624BE /* Assets.xcassets */,
@@ -203,6 +217,39 @@
 				978F90E01F273614002624BE /* LJPageStyle.swift */,
 			);
 			path = LJPageView;
+			sourceTree = "<group>";
+		};
+		97C8FA471F32BFF8008025BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				972BD6FB1F321AF0001C6172 /* HomeType.swift */,
+				97C8FA4B1F32C0F0008025BC /* AnchorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97C8FA481F32BFF8008025BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				97C8FA491F32C02D008025BC /* LJHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		97C8FA4D1F32C6A7008025BC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		97C8FA511F32F1D8008025BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97C8FA521F32F1FB008025BC /* HomeViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		97E639AD1F2ADDB2007D34DF /* LJWaterFallView */ = {
@@ -348,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				972BD7061F3226BA001C6172 /* AppDelegate.swift in Sources */,
+				97C8FA4C1F32C0F0008025BC /* AnchorModel.swift in Sources */,
 				972BD7191F3226FA001C6172 /* ViewController.swift in Sources */,
 				978F90D91F2732A8002624BE /* LJPageView.swift in Sources */,
 				972BD7071F3226BA001C6172 /* LJNavigationCotroller.swift in Sources */,
@@ -358,14 +406,18 @@
 				972BD70B1F3226C9001C6172 /* UIColor-Extension.swift in Sources */,
 				972BD7081F3226BA001C6172 /* LJTabBarController.swift in Sources */,
 				978F90E11F273614002624BE /* LJPageStyle.swift in Sources */,
+				97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */,
 				972BD70E1F3226D2001C6172 /* LJFoundController.swift in Sources */,
 				978F90DF1F273319002624BE /* LJContentView.swift in Sources */,
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				972BD6FC1F321AF0001C6172 /* HomeType.swift in Sources */,
 				97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */,
 				978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */,
+				97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */,
 				972BD6FE1F321D16001C6172 /* const.swift in Sources */,
 				972BD7181F3226FA001C6172 /* TestSwiftController.swift in Sources */,
+				97C8FA4F1F32C6C3008025BC /* LJNetWorkManager.swift in Sources */,
+				97C8FA4A1F32C02D008025BC /* LJHomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

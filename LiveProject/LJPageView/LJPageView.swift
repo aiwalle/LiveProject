@@ -20,6 +20,7 @@ class LJPageView: UIView {
         self.style = style
         self.childVcs = childVcs
         self.parentVc = parentVc
+        parentVc.automaticallyAdjustsScrollViewInsets = false
         super.init(frame: frame)
         setupUI()
     }

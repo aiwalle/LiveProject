@@ -16,3 +16,7 @@ let kTabBarHeight : CGFloat = 44
 
 let kDeviceWidth = UIScreen.main.bounds.width
 let kDeviceHeight = UIScreen.main.bounds.height
+
+let kAnchorCellSubviewMargin : CGFloat = 8
+
+let kAnchorControllerCellID : String = "kAnchorControllerCellID"
