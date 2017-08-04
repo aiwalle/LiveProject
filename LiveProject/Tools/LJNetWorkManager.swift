@@ -20,11 +20,16 @@ class LJNetWorkManager {
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         
         Alamofire.request(URLString, method: method, parameters: parameters).responseJSON { (response) in
-            guard let result = response.result.value else {
-                print(response.error!)
-                return
+            switch response.result {
+            case .success:
+                guard let result = response.result.value else {
+                    print(response.error!)
+                    return
+                }
+                finishedCallBack(result)
+            case .failure(let error):
+                print(error)
             }
-            finishedCallBack(result)
         }
     }
 }

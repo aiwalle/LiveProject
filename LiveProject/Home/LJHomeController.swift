@@ -47,6 +47,7 @@ extension LJHomeController {
         var style = LJPageStyle()
         style.isScrollEnable = true
         style.isNeedScale = true
+//        style.isShowCoverView = true
         let pageFrame = CGRect(x: 0, y: kStatusBarHeight + kNavigationBarHeight, width: kDeviceWidth, height: kDeviceHeight - kStatusBarHeight - kNavigationBarHeight - kTabBarHeight)
         
         let titles = homeTypes.map({$0.title})

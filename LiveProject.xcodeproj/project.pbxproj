@@ -35,6 +35,8 @@
 		97C8FA4F1F32C6C3008025BC /* LJNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */; };
 		97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA521F32F1FB008025BC /* HomeViewCell.swift */; };
 		97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA541F33001E008025BC /* UIImageView-Extension.swift */; };
+		97C8FA571F3342D6008025BC /* LJRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA561F3342D6008025BC /* LJRoomController.swift */; };
+		97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA581F340093008025BC /* LJPageCollectionView.swift */; };
 		97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJNetWorkManager.swift; sourceTree = "<group>"; };
 		97C8FA521F32F1FB008025BC /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		97C8FA541F33001E008025BC /* UIImageView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
+		97C8FA561F3342D6008025BC /* LJRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRoomController.swift; sourceTree = "<group>"; };
+		97C8FA581F340093008025BC /* LJPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJPageCollectionView.swift; sourceTree = "<group>"; };
 		97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJWaterFallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 				97C8FA481F32BFF8008025BC /* ViewModel */,
 				972BD7011F32263A001C6172 /* LJHomeController.swift */,
 				972BD6FF1F3222BD001C6172 /* LJAnchorController.swift */,
+				97C8FA561F3342D6008025BC /* LJRoomController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				978F90DC1F2732FA002624BE /* LJTitleView.swift */,
 				978F90DE1F273319002624BE /* LJContentView.swift */,
 				978F90E01F273614002624BE /* LJPageStyle.swift */,
+				97C8FA581F340093008025BC /* LJPageCollectionView.swift */,
 			);
 			path = LJPageView;
 			sourceTree = "<group>";
@@ -407,6 +413,8 @@
 				972BD7081F3226BA001C6172 /* LJTabBarController.swift in Sources */,
 				978F90E11F273614002624BE /* LJPageStyle.swift in Sources */,
 				97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */,
+				97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */,
+				97C8FA571F3342D6008025BC /* LJRoomController.swift in Sources */,
 				972BD70E1F3226D2001C6172 /* LJFoundController.swift in Sources */,
 				978F90DF1F273319002624BE /* LJContentView.swift in Sources */,
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
@@ -541,6 +549,7 @@
 			baseConfigurationReference = 6C459D136A2B0A2D329AB93E /* Pods-LiveProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U34P9L9V3V;
 				INFOPLIST_FILE = LiveProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -555,6 +564,7 @@
 			baseConfigurationReference = 41BC208B8661AFC62651B31A /* Pods-LiveProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U34P9L9V3V;
 				INFOPLIST_FILE = LiveProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

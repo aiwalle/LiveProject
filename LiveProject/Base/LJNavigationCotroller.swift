@@ -36,19 +36,37 @@ class LJNavigationCotroller: UINavigationController {
         let action = Selector(("handleNavigationTransition:"))
         
         let panGes = UIPanGestureRecognizer(target: target, action: action)
-        
+        panGes.delegate = self
         view.addGestureRecognizer(panGes)
+        
         
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.childViewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
+            navigationBar.barTintColor = .white
         }
         
         super.pushViewController(viewController, animated: animated)
     }
 
     
+    override func popViewController(animated: Bool) -> UIViewController? {
+        if self.childViewControllers.count < 3 {
+            navigationBar.barTintColor = .black
+        }
+        return super.popViewController(animated: animated)
+    }
+    
 
+}
+
+extension LJNavigationCotroller : UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if self.childViewControllers.count > 1 {
+            return true
+        }
+        return false
+    }
 }

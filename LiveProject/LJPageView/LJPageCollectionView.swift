@@ -1,0 +1,95 @@
+//
+//  LJPageCollectionView.swift
+//  LiveProject
+//
+//  Created by liang on 2017/8/4.
+//  Copyright © 2017年 liang. All rights reserved.
+//
+
+import UIKit
+
+private let kPageControllerCellID = "kPageControllerCellID"
+
+class LJPageCollectionView: UIView {
+    fileprivate var titles : [String]
+    fileprivate var style : LJPageStyle
+    fileprivate var isTitleInTop : Bool
+    
+    
+    fileprivate var titleView : LJTitleView!
+    fileprivate var collectionView : UICollectionView!
+    fileprivate var pageControl : UIPageControl!
+
+    
+    init(frame: CGRect, titles: [String], style: LJPageStyle, isTitleInTop: Bool) {
+        self.titles = titles
+        self.style = style
+        self.isTitleInTop = isTitleInTop
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+}
+
+
+extension LJPageCollectionView {
+    func setupUI() {
+        let titleY = isTitleInTop ? 0 : bounds.height - style.titleHeight
+        let titleViewFrame = CGRect(x: 0, y: titleY, width: bounds.width, height: style.titleHeight)
+        titleView = LJTitleView(frame: titleViewFrame, titles: self.titles, style: self.style)
+        titleView.delegate = self
+        
+        addSubview(titleView)
+        
+        let pageH : CGFloat = 20.0
+        let pageY = isTitleInTop ? bounds.height - pageH : bounds.height - pageH - titleViewFrame.size.height
+        let pageControlFrame = CGRect(x: 0, y: pageY, width: bounds.width, height: pageH)
+        pageControl = UIPageControl(frame: pageControlFrame)
+        pageControl.numberOfPages = 4
+        pageControl.currentPage = 0
+        addSubview(pageControl)
+        
+        let collectionY = isTitleInTop ? style.titleHeight : 0
+        let collectionH = bounds.height - style.titleHeight - pageControl.frame.size.height
+        let collectionViewFrame = CGRect(x: 0, y: collectionY, width: bounds.width, height: collectionH)
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 60, height: 60)
+        layout.scrollDirection = .horizontal
+        collectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: layout)
+        collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kPageControllerCellID)
+        collectionView.dataSource = self
+        addSubview(collectionView)
+        
+        
+        
+        titleView.backgroundColor = UIColor.getRandomColor()
+        pageControl.backgroundColor = UIColor.getRandomColor()
+        collectionView.backgroundColor = UIColor.getRandomColor()
+    }
+}
+
+extension LJPageCollectionView : UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPageControllerCellID, for: indexPath)
+        cell.backgroundColor = UIColor.getRandomColor()
+        return cell
+    }
+}
+
+extension LJPageCollectionView : LJTitleViewDelegate {
+    func titleView(_ titleView: LJTitleView, targetIndex: Int) {
+        
+    }
+}

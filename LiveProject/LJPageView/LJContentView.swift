@@ -36,6 +36,7 @@ class LJContentView: UIView {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.bounces = false
         collectionView.scrollsToTop = false
+        collectionView.backgroundColor = .white
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kContentCellID)
         return collectionView
     }()
@@ -45,6 +46,7 @@ class LJContentView: UIView {
         self.childVcs = childVcs
         self.parentVc = parentVc
         super.init(frame: frame)
+        
         setupUI()
     }
     

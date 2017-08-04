@@ -24,7 +24,7 @@ class LJAnchorController: UIViewController {
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout:layout )
         collectionView.register(HomeViewCell.self, forCellWithReuseIdentifier: kAnchorControllerCellID)
-        
+        collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
         return collectionView
@@ -32,9 +32,8 @@ class LJAnchorController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-//        loadData(index: 0)
+        loadData(index: 0)
     }
 }
 
@@ -53,20 +52,24 @@ extension LJAnchorController {
 
 extension LJAnchorController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return homeViewModel.anchorModels.count
-        return 20
+//        return 0
+        return homeViewModel.anchorModels.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = HomeViewCell.cellWithCollectionView(collectionView, indexPath: indexPath as NSIndexPath)
-//        cell.anchorModel = homeViewModel.anchorModels[indexPath.item]
+        cell.anchorModel = homeViewModel.anchorModels[indexPath.item]
         return cell
     }
 }
 
 extension LJAnchorController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(ViewController(), animated: true)
+        let roomVc = LJRoomController()
+        roomVc.anchor = homeViewModel.anchorModels[indexPath.item]
+        
+        self.navigationController?.pushViewController(roomVc, animated: true)
     }
 }
 
