@@ -20,3 +20,5 @@ let kDeviceHeight = UIScreen.main.bounds.height
 let kAnchorCellSubviewMargin : CGFloat = 8
 
 let kAnchorControllerCellID : String = "kAnchorControllerCellID"
+
+let kPageControllerCellID = "kPageControllerCellID"
