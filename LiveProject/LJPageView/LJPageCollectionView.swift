@@ -26,7 +26,7 @@ class LJPageCollectionView: UIView {
     fileprivate var titles : [String]
     fileprivate var style : LJPageStyle
     fileprivate var isTitleInTop : Bool
-    
+    fileprivate lazy var currentIndex : IndexPath = IndexPath(item: 0, section: 0)
     
     fileprivate var titleView : LJTitleView!
     fileprivate var collectionView : UICollectionView!
@@ -78,6 +78,7 @@ extension LJPageCollectionView {
         collectionView.showsVerticalScrollIndicator = false
         
         collectionView.dataSource = self
+        collectionView.delegate = self
         addSubview(collectionView)
         
         
@@ -108,7 +109,11 @@ extension LJPageCollectionView : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource?.pageCollectionView(self, numberOfItemsInSection: section) ?? 0
+        let sectionItemCounts = dataSource?.pageCollectionView(self, numberOfItemsInSection: section) ?? 0
+        if section == 0 {
+            pageControl.numberOfPages = (sectionItemCounts - 1) / (layout.cols * layout.rows) + 1
+        }
+        return sectionItemCounts
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -116,8 +121,44 @@ extension LJPageCollectionView : UICollectionViewDataSource {
     }
 }
 
+extension LJPageCollectionView : UICollectionViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewEndScroll()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            scrollViewEndScroll()
+        }
+    }
+    
+    private func scrollViewEndScroll() {
+        let point = CGPoint(x: layout.sectionInset.left + 1 + collectionView.contentOffset.x, y: layout.sectionInset.top + 1)
+        guard let indexPath = collectionView.indexPathForItem(at: point) else { return }
+        
+        if indexPath.section != currentIndex.section {
+            let itemsCount = dataSource?.pageCollectionView(self, numberOfItemsInSection: indexPath.section) ?? 0
+            pageControl.numberOfPages = (itemsCount - 1) / (layout.cols * layout.rows) + 1
+            titleView.setCurrentIndex(indexPath.section)
+            currentIndex = indexPath
+        }
+        pageControl.currentPage = indexPath.item / (layout.cols * layout.rows)
+    }
+}
+
 extension LJPageCollectionView : LJTitleViewDelegate {
     func titleView(_ titleView: LJTitleView, targetIndex: Int) {
+        let indexPath = IndexPath(item: 0, section: targetIndex)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+        // 调整间距偏移量，这里的代码是来修复一个Bug,Bug原因未知
+        let itemsCount = dataSource?.pageCollectionView(self, numberOfItemsInSection: targetIndex) ?? 0
         
+        pageControl.numberOfPages = (itemsCount - 1) / (layout.cols * layout.rows) + 1
+        pageControl.currentPage = 0
+        currentIndex = indexPath
+        if (targetIndex == collectionView.numberOfSections - 1) && itemsCount <= layout.cols * layout.rows{
+            return
+        }
+        collectionView.contentOffset.x -= layout.sectionInset.left
     }
 }

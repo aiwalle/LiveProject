@@ -155,14 +155,18 @@ extension LJTitleView {
             return
         }
 //        print(targetLabel)
+        delegate?.titleView(self, targetIndex: targetLabel.tag)
+        adjustTitles(targetLabel)
+    }
+    
+    
+    fileprivate func adjustTitles(_ targetLabel : UILabel) {
         let sourceLabel = titleLabels[currentIndex]
         sourceLabel.textColor = style.normalColor
         targetLabel.textColor = style.selectColor
         currentIndex = targetLabel.tag
         
         adjustLabelPosition()
-        
-        delegate?.titleView(self, targetIndex: currentIndex)
         
         if style.isNeedScale {
             UIView.animate(withDuration: 0.25, animations: {
@@ -179,12 +183,11 @@ extension LJTitleView {
         }
         
         if style.isShowCoverView {
-            UIView.animate(withDuration: 0.25, animations: { 
+            UIView.animate(withDuration: 0.25, animations: {
                 self.coverView.frame.origin.x = self.style.isScrollEnable ? targetLabel.frame.origin.x - self.style.coverViewMargin : targetLabel.frame.origin.x
                 self.coverView.frame.size.width = self.style.isScrollEnable ? (targetLabel.frame.width + 2 * self.style.coverViewMargin) : targetLabel.frame.width
             })
         }
-        
     }
     
     fileprivate func adjustLabelPosition() {
@@ -202,6 +205,13 @@ extension LJTitleView {
             offsetX = maxOffsetX
         }
         scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+    }
+}
+
+extension LJTitleView {
+    func setCurrentIndex(_ index : Int) {
+        let targetLabel = titleLabels[index]
+        adjustTitles(targetLabel)
     }
 }
 

@@ -36,11 +36,11 @@ class LJFoundController: UIViewController {
 
 extension LJFoundController: LJPageCollectionViewDataSource {
     func numberOfSectionInPageCollectionView(_ pageCollectionView: LJPageCollectionView) -> Int {
-        return 2
+        return 4
     }
     
     func pageCollectionView(_ pageCollectionView: LJPageCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 49
+        return section == 0 ? 100 : 50
     }
     
     func pageCollectionView(_ pageCollectionView: LJPageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

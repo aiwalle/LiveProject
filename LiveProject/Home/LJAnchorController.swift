@@ -33,7 +33,7 @@ class LJAnchorController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadData(index: 0)
+//        loadData(index: 0)
     }
 }
 
