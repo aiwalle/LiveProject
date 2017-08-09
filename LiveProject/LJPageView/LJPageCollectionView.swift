@@ -149,8 +149,9 @@ extension LJPageCollectionView : UICollectionViewDelegate {
 extension LJPageCollectionView : LJTitleViewDelegate {
     func titleView(_ titleView: LJTitleView, targetIndex: Int) {
         let indexPath = IndexPath(item: 0, section: targetIndex)
+        // scrollTo 只能滚动到collectionView的contentSize，不可能超过滚动范围，所以如果再设置contentOffset就会有问题
         collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
-        // 调整间距偏移量，这里的代码是来修复一个Bug,Bug原因未知
+        // 调整间距偏移量，这里的代码是来解决👆的问题
         let itemsCount = dataSource?.pageCollectionView(self, numberOfItemsInSection: targetIndex) ?? 0
         
         pageControl.numberOfPages = (itemsCount - 1) / (layout.cols * layout.rows) + 1
