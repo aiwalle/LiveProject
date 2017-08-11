@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="LiveProject" customModuleProvider="target">
+            <connections>
+                <outlet property="emailField" destination="Q5y-2Z-kHf" id="MDD-yk-paS"/>
+                <outlet property="flashLabel" destination="WGN-12-AZw" id="VhW-5t-Z2U"/>
+                <outlet property="loginBtn" destination="LVI-PQ-jYP" id="3Zs-Ue-vfW"/>
+                <outlet property="pwdField" destination="sKG-Ci-Mid" id="jvP-G1-Zen"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="jdl-KP-n8Z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入邮箱" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q5y-2Z-kHf" customClass="DataEntryTextField" customModule="LiveProject" customModuleProvider="target">
+                    <rect key="frame" x="10" y="458" width="355" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-PQ-jYP" customClass="LoginButton" customModule="LiveProject" customModuleProvider="target">
+                    <rect key="frame" x="10" y="607" width="355" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="V1Q-Pd-1c3"/>
+                    </constraints>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="loginBtnClick:" destination="-1" eventType="touchUpInside" id="bMf-vu-io6"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入用户名和密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGN-12-AZw" customClass="FlashLabel" customModule="LiveProject" customModuleProvider="target">
+                    <rect key="frame" x="10" y="571.5" width="355" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.50532664559999996" blue="0.034178830219999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKG-Ci-Mid" customClass="DataEntryTextField" customModule="LiveProject" customModuleProvider="target">
+                    <rect key="frame" x="10" y="518" width="355" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5y-2Z-kHf" firstAttribute="trailing" secondItem="sKG-Ci-Mid" secondAttribute="trailing" id="0Vu-ZZ-xEV"/>
+                <constraint firstItem="WGN-12-AZw" firstAttribute="trailing" secondItem="LVI-PQ-jYP" secondAttribute="trailing" id="4tf-eV-cAD"/>
+                <constraint firstItem="LVI-PQ-jYP" firstAttribute="top" secondItem="sKG-Ci-Mid" secondAttribute="bottom" constant="59" id="6Ff-yn-i9t"/>
+                <constraint firstItem="sKG-Ci-Mid" firstAttribute="leading" secondItem="LVI-PQ-jYP" secondAttribute="leading" id="88G-Ed-Gkb"/>
+                <constraint firstItem="LVI-PQ-jYP" firstAttribute="top" secondItem="WGN-12-AZw" secondAttribute="bottom" constant="15" id="FL0-jY-rej"/>
+                <constraint firstItem="jdl-KP-n8Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KI4-cN-v5W"/>
+                <constraint firstItem="sKG-Ci-Mid" firstAttribute="trailing" secondItem="LVI-PQ-jYP" secondAttribute="trailing" id="OTO-tn-s1z"/>
+                <constraint firstAttribute="trailing" secondItem="LVI-PQ-jYP" secondAttribute="trailing" constant="10" id="P1Q-XS-UDc"/>
+                <constraint firstItem="sKG-Ci-Mid" firstAttribute="top" secondItem="Q5y-2Z-kHf" secondAttribute="bottom" constant="30" id="TTr-ss-VXd"/>
+                <constraint firstItem="WGN-12-AZw" firstAttribute="leading" secondItem="LVI-PQ-jYP" secondAttribute="leading" id="UsW-gb-2Yg"/>
+                <constraint firstAttribute="bottom" secondItem="jdl-KP-n8Z" secondAttribute="bottom" id="dKK-9y-tKF"/>
+                <constraint firstItem="jdl-KP-n8Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="emt-Hp-pOV"/>
+                <constraint firstAttribute="trailing" secondItem="jdl-KP-n8Z" secondAttribute="trailing" id="gTj-3f-pGG"/>
+                <constraint firstItem="LVI-PQ-jYP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="kfo-Ta-Z4l"/>
+                <constraint firstItem="Q5y-2Z-kHf" firstAttribute="leading" secondItem="sKG-Ci-Mid" secondAttribute="leading" id="mej-g7-7LW"/>
+                <constraint firstAttribute="bottom" secondItem="LVI-PQ-jYP" secondAttribute="bottom" constant="30" id="zOt-Rx-4d7"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="login" width="1242" height="2208"/>
+    </resources>
+</document>
