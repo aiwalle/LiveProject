@@ -8,10 +8,25 @@
 
 import UIKit
 
+
 class LJFoundController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addPageCollectionView()
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    func addPageCollectionView() {
         automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = .white
         

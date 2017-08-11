@@ -43,7 +43,7 @@ extension LJTabBarController {
         addChildVc(LJHomeController(), title: "首页", normalImage: "live-n", selectedImage: "live-p")
         addChildVc(LoginViewController(), title: "排行", normalImage: "ranking-n", selectedImage: "ranking-p")
         addChildVc(LJFoundController(), title: "发现", normalImage: "found-n", selectedImage: "found-p")
-        addChildVc(LJMineController(), title: "我的", normalImage: "mine-n", selectedImage: "mine-p")
+        addChildVc(LJGiftController(), title: "我的", normalImage: "mine-n", selectedImage: "mine-p")
     }
     
     fileprivate func addChildVc(_ childVc : UIViewController, title : String, normalImage : String, selectedImage: String) {

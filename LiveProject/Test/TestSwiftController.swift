@@ -33,7 +33,20 @@ class TestSwiftController: UIViewController {
 //        }
 //        
 //        
-
+        
+        
+        
+        view.backgroundColor = .white
+        
+        let emoView = EmoticonView.loadFromNib()
+        
+        view.addSubview(emoView)
+        
+        let gift = GiftView.loadFromNib()
+        view.addSubview(gift)
+        
+        // 协议规定了遵守的类型，因此这里报错
+        //        let person = Person.loadFromNib()
     }
 
     
