@@ -8,4 +8,5 @@ target 'LiveProject' do
   # Pods for LiveProject
     pod 'Alamofire', '~> 4.5.0'
     pod 'Kingfisher', '~> 3.10.3'
+    pod 'ProtocolBuffers-Swift'
 end
