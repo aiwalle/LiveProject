@@ -22,7 +22,8 @@ class LJAnchorController: UIViewController {
         layout.cols = 2
         layout.dataSource = self
         layout.scrollDirection = .vertical
-        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout:layout )
+        let collectionFrame = CGRect(x: 0, y: 0, width: kDeviceWidth, height: kDeviceHeight - kStatusBarHeight - kNavigationBarHeight - 44 - kTabBarHeight)
+        let collectionView = UICollectionView(frame: collectionFrame, collectionViewLayout:layout )
         collectionView.register(HomeViewCell.self, forCellWithReuseIdentifier: kAnchorControllerCellID)
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
@@ -33,7 +34,7 @@ class LJAnchorController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        loadData(index: 0)
+        loadData(index: 0)
     }
 }
 
