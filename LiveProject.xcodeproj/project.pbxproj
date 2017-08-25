@@ -48,6 +48,9 @@
 		978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90DC1F2732FA002624BE /* LJTitleView.swift */; };
 		978F90DF1F273319002624BE /* LJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90DE1F273319002624BE /* LJContentView.swift */; };
 		978F90E11F273614002624BE /* LJPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F90E01F273614002624BE /* LJPageStyle.swift */; };
+		97C679A01F4FCE110045CB59 /* LJAttributeStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C6799F1F4FCE110045CB59 /* LJAttributeStringGenerator.swift */; };
+		97C679A31F4FF53F0045CB59 /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C679A11F4FF53F0045CB59 /* QHNormalEmotionSort.plist */; };
+		97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97C679A21F4FF53F0045CB59 /* QHSohuGifSort.plist */; };
 		97C8FA4A1F32C02D008025BC /* LJHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA491F32C02D008025BC /* LJHomeViewModel.swift */; };
 		97C8FA4C1F32C0F0008025BC /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA4B1F32C0F0008025BC /* AnchorModel.swift */; };
 		97C8FA4F1F32C6C3008025BC /* LJNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */; };
@@ -105,6 +108,9 @@
 		978F90DC1F2732FA002624BE /* LJTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTitleView.swift; sourceTree = "<group>"; };
 		978F90DE1F273319002624BE /* LJContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJContentView.swift; sourceTree = "<group>"; };
 		978F90E01F273614002624BE /* LJPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJPageStyle.swift; sourceTree = "<group>"; };
+		97C6799F1F4FCE110045CB59 /* LJAttributeStringGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJAttributeStringGenerator.swift; sourceTree = "<group>"; };
+		97C679A11F4FF53F0045CB59 /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		97C679A21F4FF53F0045CB59 /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
 		97C8FA491F32C02D008025BC /* LJHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJHomeViewModel.swift; sourceTree = "<group>"; };
 		97C8FA4B1F32C0F0008025BC /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJNetWorkManager.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 		9709CEB21F3D827E004CEBF4 /* Gift */ = {
 			isa = PBXGroup;
 			children = (
+				972BD7151F3226FA001C6172 /* Test */,
 				970BBA141F41448300A2E2E0 /* View */,
 				9709CEB31F3D827E004CEBF4 /* ViewModel */,
 				9709CEB81F3D84A0004CEBF4 /* LJGiftController.swift */,
@@ -169,6 +176,8 @@
 		972BD6F41F3218BB001C6172 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				97C679A11F4FF53F0045CB59 /* QHNormalEmotionSort.plist */,
+				97C679A21F4FF53F0045CB59 /* QHSohuGifSort.plist */,
 				972BD6F51F3218BB001C6172 /* types.plist */,
 			);
 			path = Resource;
@@ -238,7 +247,8 @@
 				972BD7161F3226FA001C6172 /* TestSwiftController.swift */,
 				972BD7171F3226FA001C6172 /* ViewController.swift */,
 			);
-			path = Test;
+			name = Test;
+			path = ../Test;
 			sourceTree = "<group>";
 		};
 		975F293A1F38675C0049B848 /* LoadXib */ = {
@@ -280,10 +290,10 @@
 		978F909E1F271EF9002624BE /* LiveProject */ = {
 			isa = PBXGroup;
 			children = (
+				972BD6F41F3218BB001C6172 /* Resource */,
 				975F293A1F38675C0049B848 /* LoadXib */,
 				972BD6F81F321A44001C6172 /* Base */,
 				972BD6F71F321A16001C6172 /* Home */,
-				972BD6F41F3218BB001C6172 /* Resource */,
 				97E639AD1F2ADDB2007D34DF /* LJWaterFallView */,
 				978F90D51F273250002624BE /* LJPageView */,
 				972BD7121F3226EF001C6172 /* Rank */,
@@ -292,7 +302,6 @@
 				972BD7091F3226C9001C6172 /* Extension */,
 				97C8FA4D1F32C6A7008025BC /* Tools */,
 				9709CEB21F3D827E004CEBF4 /* Gift */,
-				972BD7151F3226FA001C6172 /* Test */,
 				978F90A31F271EF9002624BE /* Main.storyboard */,
 				978F90A61F271EF9002624BE /* Assets.xcassets */,
 				978F90A81F271EF9002624BE /* LaunchScreen.storyboard */,
@@ -335,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */,
+				97C6799F1F4FCE110045CB59 /* LJAttributeStringGenerator.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -432,9 +442,11 @@
 				978F90A71F271EF9002624BE /* Assets.xcassets in Resources */,
 				972BD6F61F3218BB001C6172 /* types.plist in Resources */,
 				978F90A51F271EF9002624BE /* Main.storyboard in Resources */,
+				97C679A31F4FF53F0045CB59 /* QHNormalEmotionSort.plist in Resources */,
 				971196451F3B3603005D4FFF /* LoginViewController.xib in Resources */,
 				970BBA181F4144A400A2E2E0 /* GiftViewCell.xib in Resources */,
 				975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */,
+				97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +535,7 @@
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */,
 				9709CEB71F3D832F004CEBF4 /* LJGiftModel.swift in Sources */,
+				97C679A01F4FCE110045CB59 /* LJAttributeStringGenerator.swift in Sources */,
 				972BD6FC1F321AF0001C6172 /* HomeType.swift in Sources */,
 				97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */,
 				978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */,
