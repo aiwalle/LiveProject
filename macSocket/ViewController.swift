@@ -9,6 +9,8 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    fileprivate lazy var socketManager = LJSocketManager()
+    
     @IBOutlet weak var openBtn: NSButton!
 
     @IBOutlet weak var closeBtn: NSButton!
@@ -23,11 +25,13 @@ class ViewController: NSViewController {
 
     @IBAction func serveOpen(_ sender: NSButton) {
         statusLabel.stringValue = "服务器正在运行"
+        socketManager.startRunning()
+        
     }
 
     @IBAction func serveClose(_ sender: NSButton) {
         statusLabel.stringValue = "服务器停止运行"
-        
+        socketManager.stopRunning()
     }
 
 }

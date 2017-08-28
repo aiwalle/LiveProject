@@ -709,7 +709,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-lK-j75">
-                                <rect key="frame" x="200" y="135" width="80" height="17"/>
+                                <rect key="frame" x="200" y="135" width="150" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="服务器未开启" id="bow-0E-tZR">
                                     <font key="font" metaFont="system"/>

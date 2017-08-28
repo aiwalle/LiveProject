@@ -10,3 +10,9 @@ target 'LiveProject' do
     pod 'Kingfisher', '~> 3.10.3'
     pod 'ProtocolBuffers-Swift'
 end
+
+target 'clientSocket' do
+    use_frameworks!
+    
+    pod 'ProtocolBuffers-Swift'
+end

@@ -50,6 +50,19 @@
 		9747D10E1F53E4A3009CFB21 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1091F53E4A3009CFB21 /* ytcpsocket.swift */; };
 		9747D10F1F53E4A3009CFB21 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 9747D10A1F53E4A3009CFB21 /* yudpsocket.c */; };
 		9747D1101F53E4A3009CFB21 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D10B1F53E4A3009CFB21 /* yudpsocket.swift */; };
+		9747D1121F53E5D3009CFB21 /* LJSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1111F53E5D3009CFB21 /* LJSocketManager.swift */; };
+		9747D1141F53E897009CFB21 /* LJClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1131F53E897009CFB21 /* LJClientManager.swift */; };
+		9747D11C1F53FF5B009CFB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D11B1F53FF5B009CFB21 /* AppDelegate.swift */; };
+		9747D11E1F53FF5B009CFB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D11D1F53FF5B009CFB21 /* ViewController.swift */; };
+		9747D1211F53FF5B009CFB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9747D11F1F53FF5B009CFB21 /* Main.storyboard */; };
+		9747D1231F53FF5B009CFB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9747D1221F53FF5B009CFB21 /* Assets.xcassets */; };
+		9747D1261F53FF5B009CFB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9747D1241F53FF5B009CFB21 /* LaunchScreen.storyboard */; };
+		9747D1321F53FFD8009CFB21 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D12D1F53FFD8009CFB21 /* ysocket.swift */; };
+		9747D1331F53FFD8009CFB21 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 9747D12E1F53FFD8009CFB21 /* ytcpsocket.c */; };
+		9747D1341F53FFD8009CFB21 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D12F1F53FFD8009CFB21 /* ytcpsocket.swift */; };
+		9747D1351F53FFD8009CFB21 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1301F53FFD8009CFB21 /* yudpsocket.c */; };
+		9747D1361F53FFD8009CFB21 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1311F53FFD8009CFB21 /* yudpsocket.swift */; };
+		9747D1381F540006009CFB21 /* LJSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1371F540006009CFB21 /* LJSocket.swift */; };
 		975F293C1F3867D90049B848 /* EmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975F293B1F3867D90049B848 /* EmoticonView.swift */; };
 		975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975F293D1F3867FA0049B848 /* EmoticonView.xib */; };
 		978F90A51F271EF9002624BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978F90A31F271EF9002624BE /* Main.storyboard */; };
@@ -121,6 +134,21 @@
 		9747D1091F53E4A3009CFB21 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
 		9747D10A1F53E4A3009CFB21 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		9747D10B1F53E4A3009CFB21 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		9747D1111F53E5D3009CFB21 /* LJSocketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJSocketManager.swift; sourceTree = "<group>"; };
+		9747D1131F53E897009CFB21 /* LJClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJClientManager.swift; sourceTree = "<group>"; };
+		9747D1191F53FF5B009CFB21 /* clientSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9747D11B1F53FF5B009CFB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9747D11D1F53FF5B009CFB21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9747D1201F53FF5B009CFB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9747D1221F53FF5B009CFB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9747D1251F53FF5B009CFB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9747D1271F53FF5B009CFB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9747D12D1F53FFD8009CFB21 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		9747D12E1F53FFD8009CFB21 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		9747D12F1F53FFD8009CFB21 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		9747D1301F53FFD8009CFB21 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		9747D1311F53FFD8009CFB21 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		9747D1371F540006009CFB21 /* LJSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJSocket.swift; sourceTree = "<group>"; };
 		975F293B1F3867D90049B848 /* EmoticonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonView.swift; sourceTree = "<group>"; };
 		975F293D1F3867FA0049B848 /* EmoticonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonView.xib; sourceTree = "<group>"; };
 		978F909C1F271EF9002624BE /* LiveProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +176,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		9747D0D01F53C0FE009CFB21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9747D1161F53FF5B009CFB21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,7 +318,7 @@
 			path = ../Test;
 			sourceTree = "<group>";
 		};
-		9747D0D41F53C0FF009CFB21 /* macSocket */ = {
+		9747D0D41F53C0FF009CFB21 /* macSocket_server */ = {
 			isa = PBXGroup;
 			children = (
 				9747D1051F53E4A3009CFB21 /* LJSocket */,
@@ -293,6 +328,7 @@
 				9747D0DB1F53C0FF009CFB21 /* Main.storyboard */,
 				9747D0DE1F53C0FF009CFB21 /* Info.plist */,
 			);
+			name = macSocket_server;
 			path = macSocket;
 			sourceTree = "<group>";
 		};
@@ -300,6 +336,8 @@
 			isa = PBXGroup;
 			children = (
 				9747D1061F53E4A3009CFB21 /* ysocket */,
+				9747D1111F53E5D3009CFB21 /* LJSocketManager.swift */,
+				9747D1131F53E897009CFB21 /* LJClientManager.swift */,
 			);
 			path = LJSocket;
 			sourceTree = "<group>";
@@ -312,6 +350,41 @@
 				9747D1091F53E4A3009CFB21 /* ytcpsocket.swift */,
 				9747D10A1F53E4A3009CFB21 /* yudpsocket.c */,
 				9747D10B1F53E4A3009CFB21 /* yudpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
+		9747D11A1F53FF5B009CFB21 /* clientSocket */ = {
+			isa = PBXGroup;
+			children = (
+				9747D12B1F53FFD8009CFB21 /* LJSocket */,
+				9747D11B1F53FF5B009CFB21 /* AppDelegate.swift */,
+				9747D11D1F53FF5B009CFB21 /* ViewController.swift */,
+				9747D11F1F53FF5B009CFB21 /* Main.storyboard */,
+				9747D1221F53FF5B009CFB21 /* Assets.xcassets */,
+				9747D1241F53FF5B009CFB21 /* LaunchScreen.storyboard */,
+				9747D1271F53FF5B009CFB21 /* Info.plist */,
+			);
+			path = clientSocket;
+			sourceTree = "<group>";
+		};
+		9747D12B1F53FFD8009CFB21 /* LJSocket */ = {
+			isa = PBXGroup;
+			children = (
+				9747D12C1F53FFD8009CFB21 /* ysocket */,
+				9747D1371F540006009CFB21 /* LJSocket.swift */,
+			);
+			path = LJSocket;
+			sourceTree = "<group>";
+		};
+		9747D12C1F53FFD8009CFB21 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				9747D12D1F53FFD8009CFB21 /* ysocket.swift */,
+				9747D12E1F53FFD8009CFB21 /* ytcpsocket.c */,
+				9747D12F1F53FFD8009CFB21 /* ytcpsocket.swift */,
+				9747D1301F53FFD8009CFB21 /* yudpsocket.c */,
+				9747D1311F53FFD8009CFB21 /* yudpsocket.swift */,
 			);
 			path = ysocket;
 			sourceTree = "<group>";
@@ -338,7 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				978F909E1F271EF9002624BE /* LiveProject */,
-				9747D0D41F53C0FF009CFB21 /* macSocket */,
+				9747D0D41F53C0FF009CFB21 /* macSocket_server */,
+				9747D11A1F53FF5B009CFB21 /* clientSocket */,
 				978F909D1F271EF9002624BE /* Products */,
 				CE1B4FD012C4D167B329FC2C /* Pods */,
 				193BD182C53D641D2E90F6B7 /* Frameworks */,
@@ -350,6 +424,7 @@
 			children = (
 				978F909C1F271EF9002624BE /* LiveProject.app */,
 				9747D0D31F53C0FE009CFB21 /* macSocket.app */,
+				9747D1191F53FF5B009CFB21 /* clientSocket.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,6 +537,23 @@
 			productReference = 9747D0D31F53C0FE009CFB21 /* macSocket.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9747D1181F53FF5B009CFB21 /* clientSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9747D1281F53FF5B009CFB21 /* Build configuration list for PBXNativeTarget "clientSocket" */;
+			buildPhases = (
+				9747D1151F53FF5B009CFB21 /* Sources */,
+				9747D1161F53FF5B009CFB21 /* Frameworks */,
+				9747D1171F53FF5B009CFB21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = clientSocket;
+			productName = clientSocket;
+			productReference = 9747D1191F53FF5B009CFB21 /* clientSocket.app */;
+			productType = "com.apple.product-type.application";
+		};
 		978F909B1F271EF9002624BE /* LiveProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 978F90AE1F271EF9002624BE /* Build configuration list for PBXNativeTarget "LiveProject" */;
@@ -497,6 +589,11 @@
 						DevelopmentTeam = RF96M4B8KB;
 						ProvisioningStyle = Automatic;
 					};
+					9747D1181F53FF5B009CFB21 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = RF96M4B8KB;
+						ProvisioningStyle = Automatic;
+					};
 					978F909B1F271EF9002624BE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = U34P9L9V3V;
@@ -519,6 +616,7 @@
 			targets = (
 				978F909B1F271EF9002624BE /* LiveProject */,
 				9747D0D21F53C0FE009CFB21 /* macSocket */,
+				9747D1181F53FF5B009CFB21 /* clientSocket */,
 			);
 		};
 /* End PBXProject section */
@@ -530,6 +628,16 @@
 			files = (
 				9747D0DA1F53C0FF009CFB21 /* Assets.xcassets in Resources */,
 				9747D0DD1F53C0FF009CFB21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9747D1171F53FF5B009CFB21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9747D1261F53FF5B009CFB21 /* LaunchScreen.storyboard in Resources */,
+				9747D1231F53FF5B009CFB21 /* Assets.xcassets in Resources */,
+				9747D1211F53FF5B009CFB21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,11 +716,28 @@
 			files = (
 				9747D10C1F53E4A3009CFB21 /* ysocket.swift in Sources */,
 				9747D0D81F53C0FF009CFB21 /* ViewController.swift in Sources */,
+				9747D1141F53E897009CFB21 /* LJClientManager.swift in Sources */,
+				9747D1121F53E5D3009CFB21 /* LJSocketManager.swift in Sources */,
 				9747D10F1F53E4A3009CFB21 /* yudpsocket.c in Sources */,
 				9747D10D1F53E4A3009CFB21 /* ytcpsocket.c in Sources */,
 				9747D0D61F53C0FF009CFB21 /* AppDelegate.swift in Sources */,
 				9747D10E1F53E4A3009CFB21 /* ytcpsocket.swift in Sources */,
 				9747D1101F53E4A3009CFB21 /* yudpsocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9747D1151F53FF5B009CFB21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9747D1381F540006009CFB21 /* LJSocket.swift in Sources */,
+				9747D1321F53FFD8009CFB21 /* ysocket.swift in Sources */,
+				9747D11E1F53FF5B009CFB21 /* ViewController.swift in Sources */,
+				9747D1351F53FFD8009CFB21 /* yudpsocket.c in Sources */,
+				9747D1331F53FFD8009CFB21 /* ytcpsocket.c in Sources */,
+				9747D11C1F53FF5B009CFB21 /* AppDelegate.swift in Sources */,
+				9747D1341F53FFD8009CFB21 /* ytcpsocket.swift in Sources */,
+				9747D1361F53FFD8009CFB21 /* yudpsocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +802,22 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		9747D11F1F53FF5B009CFB21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9747D1201F53FF5B009CFB21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9747D1241F53FF5B009CFB21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9747D1251F53FF5B009CFB21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		978F90A31F271EF9002624BE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -726,6 +867,32 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.walle.macSocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9747D1291F53FF5B009CFB21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RF96M4B8KB;
+				INFOPLIST_FILE = clientSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walle.clientSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9747D12A1F53FF5B009CFB21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RF96M4B8KB;
+				INFOPLIST_FILE = clientSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walle.clientSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -861,6 +1028,15 @@
 			buildConfigurations = (
 				9747D0E01F53C0FF009CFB21 /* Debug */,
 				9747D0E11F53C0FF009CFB21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9747D1281F53FF5B009CFB21 /* Build configuration list for PBXNativeTarget "clientSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9747D1291F53FF5B009CFB21 /* Debug */,
+				9747D12A1F53FF5B009CFB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
