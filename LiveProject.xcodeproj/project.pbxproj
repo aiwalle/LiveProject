@@ -39,6 +39,8 @@
 		972BD7191F3226FA001C6172 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7171F3226FA001C6172 /* ViewController.swift */; };
 		9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04D1F3C292700C26CCE /* Shakeable.swift */; };
 		9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04F1F3C2CD500C26CCE /* Flashable.swift */; };
+		9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */; };
+		9747D0CE1F53A557009CFB21 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9747D0CD1F53A557009CFB21 /* timg.gif */; };
 		975F293C1F3867D90049B848 /* EmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975F293B1F3867D90049B848 /* EmoticonView.swift */; };
 		975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975F293D1F3867FA0049B848 /* EmoticonView.xib */; };
 		978F90A51F271EF9002624BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978F90A31F271EF9002624BE /* Main.storyboard */; };
@@ -97,6 +99,8 @@
 		972BD7171F3226FA001C6172 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9732B04D1F3C292700C26CCE /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		9732B04F1F3C2CD500C26CCE /* Flashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashable.swift; sourceTree = "<group>"; };
+		9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGifImageManager.swift; sourceTree = "<group>"; };
+		9747D0CD1F53A557009CFB21 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
 		975F293B1F3867D90049B848 /* EmoticonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonView.swift; sourceTree = "<group>"; };
 		975F293D1F3867FA0049B848 /* EmoticonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonView.xib; sourceTree = "<group>"; };
 		978F909C1F271EF9002624BE /* LiveProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +180,7 @@
 		972BD6F41F3218BB001C6172 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9747D0CD1F53A557009CFB21 /* timg.gif */,
 				97C679A11F4FF53F0045CB59 /* QHNormalEmotionSort.plist */,
 				97C679A21F4FF53F0045CB59 /* QHSohuGifSort.plist */,
 				972BD6F51F3218BB001C6172 /* types.plist */,
@@ -345,6 +350,7 @@
 			children = (
 				97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */,
 				97C6799F1F4FCE110045CB59 /* LJAttributeStringGenerator.swift */,
+				9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				971196391F3AB35E005D4FFF /* GiftView.xib in Resources */,
+				9747D0CE1F53A557009CFB21 /* timg.gif in Resources */,
 				978F90AA1F271EF9002624BE /* LaunchScreen.storyboard in Resources */,
 				978F90A71F271EF9002624BE /* Assets.xcassets in Resources */,
 				972BD6F61F3218BB001C6172 /* types.plist in Resources */,
@@ -516,6 +523,7 @@
 				9709CEBB1F3D8F62004CEBF4 /* LJGiftPackage.swift in Sources */,
 				972BD7001F3222BD001C6172 /* LJAnchorController.swift in Sources */,
 				972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */,
+				9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */,
 				972BD7021F32263A001C6172 /* LJHomeController.swift in Sources */,
 				970BBA171F4144A400A2E2E0 /* GiftViewCell.swift in Sources */,
 				972BD70B1F3226C9001C6172 /* UIColor-Extension.swift in Sources */,
