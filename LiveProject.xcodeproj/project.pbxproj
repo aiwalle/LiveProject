@@ -54,7 +54,6 @@
 		9747D1121F53E5D3009CFB21 /* LJSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1111F53E5D3009CFB21 /* LJSocketManager.swift */; };
 		9747D1141F53E897009CFB21 /* LJClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1131F53E897009CFB21 /* LJClientManager.swift */; };
 		9747D11C1F53FF5B009CFB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D11B1F53FF5B009CFB21 /* AppDelegate.swift */; };
-		9747D11E1F53FF5B009CFB21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D11D1F53FF5B009CFB21 /* ViewController.swift */; };
 		9747D1211F53FF5B009CFB21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9747D11F1F53FF5B009CFB21 /* Main.storyboard */; };
 		9747D1231F53FF5B009CFB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9747D1221F53FF5B009CFB21 /* Assets.xcassets */; };
 		9747D1261F53FF5B009CFB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9747D1241F53FF5B009CFB21 /* LaunchScreen.storyboard */; };
@@ -64,8 +63,11 @@
 		9747D1351F53FFD8009CFB21 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1301F53FFD8009CFB21 /* yudpsocket.c */; };
 		9747D1361F53FFD8009CFB21 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1311F53FFD8009CFB21 /* yudpsocket.swift */; };
 		9747D1381F540006009CFB21 /* LJSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D1371F540006009CFB21 /* LJSocket.swift */; };
+		9747D13C1F540580009CFB21 /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 9747D13A1F540580009CFB21 /* IMMessage.proto */; };
+		9747D13F1F54181B009CFB21 /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D13E1F54181B009CFB21 /* Immessage.proto.swift */; };
 		975F293C1F3867D90049B848 /* EmoticonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975F293B1F3867D90049B848 /* EmoticonView.swift */; };
 		975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 975F293D1F3867FA0049B848 /* EmoticonView.xib */; };
+		976736B41F55017400BE0A05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976736B31F55017400BE0A05 /* ViewController.swift */; };
 		978F90A51F271EF9002624BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978F90A31F271EF9002624BE /* Main.storyboard */; };
 		978F90A71F271EF9002624BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 978F90A61F271EF9002624BE /* Assets.xcassets */; };
 		978F90AA1F271EF9002624BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978F90A81F271EF9002624BE /* LaunchScreen.storyboard */; };
@@ -141,7 +143,6 @@
 		9747D1131F53E897009CFB21 /* LJClientManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJClientManager.swift; sourceTree = "<group>"; };
 		9747D1191F53FF5B009CFB21 /* clientSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9747D11B1F53FF5B009CFB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9747D11D1F53FF5B009CFB21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9747D1201F53FF5B009CFB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9747D1221F53FF5B009CFB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9747D1251F53FF5B009CFB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -152,8 +153,11 @@
 		9747D1301F53FFD8009CFB21 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		9747D1311F53FFD8009CFB21 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		9747D1371F540006009CFB21 /* LJSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJSocket.swift; sourceTree = "<group>"; };
+		9747D13A1F540580009CFB21 /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
+		9747D13E1F54181B009CFB21 /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
 		975F293B1F3867D90049B848 /* EmoticonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonView.swift; sourceTree = "<group>"; };
 		975F293D1F3867FA0049B848 /* EmoticonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmoticonView.xib; sourceTree = "<group>"; };
+		976736B31F55017400BE0A05 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		978F909C1F271EF9002624BE /* LiveProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		978F90A41F271EF9002624BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		978F90A61F271EF9002624BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -365,11 +369,13 @@
 			children = (
 				9747D12B1F53FFD8009CFB21 /* LJSocket */,
 				9747D11B1F53FF5B009CFB21 /* AppDelegate.swift */,
-				9747D11D1F53FF5B009CFB21 /* ViewController.swift */,
+				976736B31F55017400BE0A05 /* ViewController.swift */,
 				9747D11F1F53FF5B009CFB21 /* Main.storyboard */,
 				9747D1221F53FF5B009CFB21 /* Assets.xcassets */,
 				9747D1241F53FF5B009CFB21 /* LaunchScreen.storyboard */,
 				9747D1271F53FF5B009CFB21 /* Info.plist */,
+				9747D13E1F54181B009CFB21 /* Immessage.proto.swift */,
+				9747D13A1F540580009CFB21 /* IMMessage.proto */,
 			);
 			path = clientSocket;
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9747D13C1F540580009CFB21 /* IMMessage.proto in Resources */,
 				9747D1261F53FF5B009CFB21 /* LaunchScreen.storyboard in Resources */,
 				9747D1231F53FF5B009CFB21 /* Assets.xcassets in Resources */,
 				9747D1211F53FF5B009CFB21 /* Main.storyboard in Resources */,
@@ -788,12 +795,13 @@
 			files = (
 				9747D1381F540006009CFB21 /* LJSocket.swift in Sources */,
 				9747D1321F53FFD8009CFB21 /* ysocket.swift in Sources */,
-				9747D11E1F53FF5B009CFB21 /* ViewController.swift in Sources */,
 				9747D1351F53FFD8009CFB21 /* yudpsocket.c in Sources */,
+				976736B41F55017400BE0A05 /* ViewController.swift in Sources */,
 				9747D1331F53FFD8009CFB21 /* ytcpsocket.c in Sources */,
 				9747D11C1F53FF5B009CFB21 /* AppDelegate.swift in Sources */,
 				9747D1341F53FFD8009CFB21 /* ytcpsocket.swift in Sources */,
 				9747D1361F53FFD8009CFB21 /* yudpsocket.swift in Sources */,
+				9747D13F1F54181B009CFB21 /* Immessage.proto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,6 +1105,7 @@
 				9747D12A1F53FF5B009CFB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		978F90971F271EF9002624BE /* Build configuration list for PBXProject "LiveProject" */ = {
 			isa = XCConfigurationList;

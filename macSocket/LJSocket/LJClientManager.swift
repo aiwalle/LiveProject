@@ -60,7 +60,9 @@ extension LJClientManager {
                 if type == 1 {
                     removeClient()
                 } else if type == 100 {
-                    heartTimeCount += 1
+                    // 客户端在线才会给服务器发送❤️包，所以如果收到了❤️，就一直连接服务器，除非客户端退出或下线
+                    heartTimeCount = 0
+                    // 不读❤️包的消息
                     continue
                 }
                 print(actualMsgStr ?? "解析消息出错")

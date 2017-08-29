@@ -9,6 +9,8 @@
 import UIKit
 private let kViewControllerCellID = "kViewControllerCellID"
 
+@IBOutlet weak var sd: UIButton!
+@IBOutlet weak var ss: UIButton!
 class ViewController: UIViewController {
     fileprivate var itemCount = 15
     
