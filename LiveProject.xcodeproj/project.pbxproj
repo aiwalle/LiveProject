@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E4987F7CDAA697B1191E871 /* Pods_clientSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EAA0890542C5E9A575A15D /* Pods_clientSocket.framework */; };
 		8E07CB424B84476A34193FCC /* Pods_LiveProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005E16C739F13FA2F6FCEB9F /* Pods_LiveProject.framework */; };
+		9705CA991F55188A00A197BA /* LJRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CA971F55188A00A197BA /* LJRoomController.swift */; };
+		9705CA9A1F55188A00A197BA /* LJRoomController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9705CA981F55188A00A197BA /* LJRoomController.xib */; };
+		9705CA9F1F555E5300A197BA /* LJChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CA9E1F555E5300A197BA /* LJChatContentView.swift */; };
+		9705CAA11F55621B00A197BA /* LJChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CAA01F55621B00A197BA /* LJChatContentCell.swift */; };
 		9709CEB51F3D82C5004CEBF4 /* LJGiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709CEB41F3D82C5004CEBF4 /* LJGiftViewModel.swift */; };
 		9709CEB71F3D832F004CEBF4 /* LJGiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709CEB61F3D832F004CEBF4 /* LJGiftModel.swift */; };
 		9709CEB91F3D84A0004CEBF4 /* LJGiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709CEB81F3D84A0004CEBF4 /* LJGiftController.swift */; };
@@ -83,7 +87,6 @@
 		97C8FA4F1F32C6C3008025BC /* LJNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */; };
 		97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA521F32F1FB008025BC /* HomeViewCell.swift */; };
 		97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA541F33001E008025BC /* UIImageView-Extension.swift */; };
-		97C8FA571F3342D6008025BC /* LJRoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA561F3342D6008025BC /* LJRoomController.swift */; };
 		97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA581F340093008025BC /* LJPageCollectionView.swift */; };
 		97C8FA5B1F34201A008025BC /* LJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA5A1F34201A008025BC /* LJPageCollectionLayout.swift */; };
 		97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */; };
@@ -95,6 +98,10 @@
 		41BC208B8661AFC62651B31A /* Pods-LiveProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject.release.xcconfig"; sourceTree = "<group>"; };
 		6C459D136A2B0A2D329AB93E /* Pods-LiveProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveProject/Pods-LiveProject.debug.xcconfig"; sourceTree = "<group>"; };
 		7B85A0DBBECA7B42622A87E2 /* Pods-clientSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-clientSocket/Pods-clientSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		9705CA971F55188A00A197BA /* LJRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRoomController.swift; sourceTree = "<group>"; };
+		9705CA981F55188A00A197BA /* LJRoomController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJRoomController.xib; sourceTree = "<group>"; };
+		9705CA9E1F555E5300A197BA /* LJChatContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJChatContentView.swift; sourceTree = "<group>"; };
+		9705CAA01F55621B00A197BA /* LJChatContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJChatContentCell.swift; sourceTree = "<group>"; };
 		9709CEB41F3D82C5004CEBF4 /* LJGiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftViewModel.swift; sourceTree = "<group>"; };
 		9709CEB61F3D832F004CEBF4 /* LJGiftModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftModel.swift; sourceTree = "<group>"; };
 		9709CEB81F3D84A0004CEBF4 /* LJGiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftController.swift; sourceTree = "<group>"; };
@@ -175,7 +182,6 @@
 		97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJNetWorkManager.swift; sourceTree = "<group>"; };
 		97C8FA521F32F1FB008025BC /* HomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		97C8FA541F33001E008025BC /* UIImageView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
-		97C8FA561F3342D6008025BC /* LJRoomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRoomController.swift; sourceTree = "<group>"; };
 		97C8FA581F340093008025BC /* LJPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJPageCollectionView.swift; sourceTree = "<group>"; };
 		97C8FA5A1F34201A008025BC /* LJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJPageCollectionLayout.swift; sourceTree = "<group>"; };
 		97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJWaterFallLayout.swift; sourceTree = "<group>"; };
@@ -216,6 +222,73 @@
 				39EAA0890542C5E9A575A15D /* Pods_clientSocket.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9705CA901F55133F00A197BA /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				9705CA961F55141A00A197BA /* View */,
+				9705CA931F5513E800A197BA /* Model */,
+				9705CA941F5513E800A197BA /* Socket */,
+				9705CA951F5513E800A197BA /* ViewModel */,
+				9705CA971F55188A00A197BA /* LJRoomController.swift */,
+				9705CA981F55188A00A197BA /* LJRoomController.xib */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		9705CA931F5513E800A197BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9705CA941F5513E800A197BA /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		9705CA951F5513E800A197BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9705CA961F55141A00A197BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9705CA9B1F555D8800A197BA /* ChatContentView */,
+				9705CA9C1F555D8800A197BA /* ChatView */,
+				9705CA9D1F555D8800A197BA /* GiftView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9705CA9B1F555D8800A197BA /* ChatContentView */ = {
+			isa = PBXGroup;
+			children = (
+				9705CA9E1F555E5300A197BA /* LJChatContentView.swift */,
+				9705CAA01F55621B00A197BA /* LJChatContentCell.swift */,
+			);
+			path = ChatContentView;
+			sourceTree = "<group>";
+		};
+		9705CA9C1F555D8800A197BA /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		9705CA9D1F555D8800A197BA /* GiftView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GiftView;
 			sourceTree = "<group>";
 		};
 		9709CEB21F3D827E004CEBF4 /* Gift */ = {
@@ -268,7 +341,6 @@
 				97C8FA481F32BFF8008025BC /* ViewModel */,
 				972BD7011F32263A001C6172 /* LJHomeController.swift */,
 				972BD6FF1F3222BD001C6172 /* LJAnchorController.swift */,
-				97C8FA561F3342D6008025BC /* LJRoomController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -448,6 +520,7 @@
 				975F293A1F38675C0049B848 /* LoadXib */,
 				972BD6F81F321A44001C6172 /* Base */,
 				972BD6F71F321A16001C6172 /* Home */,
+				9705CA901F55133F00A197BA /* Live */,
 				97E639AD1F2ADDB2007D34DF /* LJWaterFallView */,
 				978F90D51F273250002624BE /* LJPageView */,
 				972BD7121F3226EF001C6172 /* Rank */,
@@ -671,6 +744,7 @@
 				978F90A51F271EF9002624BE /* Main.storyboard in Resources */,
 				97C679A31F4FF53F0045CB59 /* QHNormalEmotionSort.plist in Resources */,
 				971196451F3B3603005D4FFF /* LoginViewController.xib in Resources */,
+				9705CA9A1F55188A00A197BA /* LJRoomController.xib in Resources */,
 				970BBA181F4144A400A2E2E0 /* GiftViewCell.xib in Resources */,
 				975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */,
 				97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */,
@@ -819,6 +893,7 @@
 				972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */,
 				9709CEBB1F3D8F62004CEBF4 /* LJGiftPackage.swift in Sources */,
 				972BD7001F3222BD001C6172 /* LJAnchorController.swift in Sources */,
+				9705CA9F1F555E5300A197BA /* LJChatContentView.swift in Sources */,
 				972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */,
 				9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */,
 				972BD7021F32263A001C6172 /* LJHomeController.swift in Sources */,
@@ -830,11 +905,12 @@
 				9711963D1F3AB79C005D4FFF /* NibLoadable.swift in Sources */,
 				97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */,
 				97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */,
-				97C8FA571F3342D6008025BC /* LJRoomController.swift in Sources */,
+				9705CA991F55188A00A197BA /* LJRoomController.swift in Sources */,
 				9709CEB91F3D84A0004CEBF4 /* LJGiftController.swift in Sources */,
 				9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */,
 				9709CEB51F3D82C5004CEBF4 /* LJGiftViewModel.swift in Sources */,
 				972BD70E1F3226D2001C6172 /* LJFoundController.swift in Sources */,
+				9705CAA11F55621B00A197BA /* LJChatContentCell.swift in Sources */,
 				978F90DF1F273319002624BE /* LJContentView.swift in Sources */,
 				9709CEBD1F3D9FE9004CEBF4 /* Requestable.swift in Sources */,
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
