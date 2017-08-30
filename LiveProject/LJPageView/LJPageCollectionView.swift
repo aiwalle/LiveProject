@@ -8,20 +8,21 @@
 
 import UIKit
 
-
-
 protocol LJPageCollectionViewDataSource: class {
     func numberOfSectionInPageCollectionView(_ pageCollectionView : LJPageCollectionView) -> Int
     func pageCollectionView(_ pageCollectionView : LJPageCollectionView, numberOfItemsInSection section: Int) -> Int
     func pageCollectionView(_ pageCollectionView : LJPageCollectionView,_ collectionView : UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
+protocol LJPageCollectionViewDelegate: class {
+    func pageCollectionView(_ pageCollectionView : LJPageCollectionView, didSelectItemAt indexPath: IndexPath)
+}
 
 class LJPageCollectionView: UIView {
     
     weak open var dataSource: LJPageCollectionViewDataSource?
 
-    
+    weak open var delegate: LJPageCollectionViewDelegate?
     
     fileprivate var titles : [String]
     fileprivate var style : LJPageStyle
@@ -122,6 +123,10 @@ extension LJPageCollectionView : UICollectionViewDataSource {
 }
 
 extension LJPageCollectionView : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.pageCollectionView(self, didSelectItemAt: indexPath)
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollViewEndScroll()
     }

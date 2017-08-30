@@ -32,7 +32,10 @@ class LJRoomController: UIViewController {
 // MARK:- 设置UI
 extension  LJRoomController {
     fileprivate func setupUI() {
-        setupBlurView()
+//        setupBlurView()
+        
+        
+        setupChatTools()
     }
     
     fileprivate func setupBlurView() {
@@ -44,6 +47,11 @@ extension  LJRoomController {
         bgImageView.addSubview(blurView)
     }
     
+    fileprivate func setupChatTools() {
+        let chatTool = LJChatToolsView(frame: CGRect(x: 0, y: 300, width: kDeviceWidth, height: 44))
+        chatTool.backgroundColor = UIColor.red
+        view.addSubview(chatTool)
+    }
     
 }
 

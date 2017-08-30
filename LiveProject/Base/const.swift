@@ -24,3 +24,17 @@ let kAnchorControllerCellID : String = "kAnchorControllerCellID"
 let kPageControllerCellID = "kPageControllerCellID"
 
 let kChatContentCellID = "kChatContentCellID"
+
+let kChatToolsViewMargin : CGFloat = 5
+
+
+
+
+let kEmoticonViewCellID = "kEmoticonViewCellID"
+
+let kEmoticonBtnWidth : CGFloat = 32
+
+let KEmoticonViewHeight : CGFloat = 250
+
+
+
