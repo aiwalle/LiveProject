@@ -8,7 +8,11 @@
 
 import UIKit
 
-class LJRoomController: UIViewController {
+private let kChatToolsViewHeight : CGFloat = 44
+private let kGiftlistViewHeight : CGFloat = kDeviceHeight * 0.5
+private let kChatContentViewHeight : CGFloat = 200
+
+class LJRoomController: UIViewController, Emitterable {
     @IBOutlet weak var bgImageView: UIImageView!
 
     @IBOutlet weak var iconImageView: UIImageView!
@@ -16,6 +20,10 @@ class LJRoomController: UIViewController {
     @IBOutlet weak var nickNameLabel: UILabel!
     
     @IBOutlet weak var roomNumberLabel: UILabel!
+    
+    fileprivate lazy var chatContentView : LJChatContentView = LJChatContentView()
+    fileprivate lazy var chatToolsView : LJChatToolsView = LJChatToolsView()
+    fileprivate lazy var giftListView : LJGiftListView = LJGiftListView.loadFromNib()
     
     var anchor : AnchorModel?
     
@@ -27,15 +35,15 @@ class LJRoomController: UIViewController {
         setupUI()
     }
 
+    
 }
 
 // MARK:- 设置UI
 extension  LJRoomController {
     fileprivate func setupUI() {
-//        setupBlurView()
+        setupBlurView()
         
-        
-        setupChatTools()
+        setupBottomView()
     }
     
     fileprivate func setupBlurView() {
@@ -47,12 +55,47 @@ extension  LJRoomController {
         bgImageView.addSubview(blurView)
     }
     
-    fileprivate func setupChatTools() {
-        let chatTool = LJChatToolsView(frame: CGRect(x: 0, y: 300, width: kDeviceWidth, height: 44))
-        chatTool.backgroundColor = UIColor.red
-        view.addSubview(chatTool)
+    fileprivate func setupBottomView() {
+        chatContentView.frame = CGRect(x: 0, y: view.bounds.height - 44 - kChatContentViewHeight, width: view.bounds.width, height: kChatContentViewHeight)
+        chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        view.addSubview(chatContentView)
+        
+        chatToolsView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kChatToolsViewHeight)
+        chatToolsView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+//        chatToolsView.delegate = self
+        view.addSubview(chatToolsView)
+        
+        // 设置giftListView
+        giftListView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftlistViewHeight)
+        giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
+        view.addSubview(giftListView)
+//        giftListView.delegate = self
     }
     
+}
+
+extension LJRoomController {
+    @IBAction func bottomBtnClick(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            chatToolsView.inputTextField.becomeFirstResponder()
+        case 1:
+            print("点击了分享")
+        case 2:
+            UIView.animate(withDuration: 0.25, animations: {
+                self.giftListView.frame.origin.y = kDeviceHeight - kGiftlistViewHeight
+            })
+        case 3:
+            print("点击了更多")
+        case 4:
+            sender.isSelected = !sender.isSelected
+            let point = CGPoint(x: sender.center.x, y: view.bounds.height - sender.bounds.height * 0.5)
+            sender.isSelected ? startEmittering(point) : stopEmittering()
+        default:
+            fatalError("未处理按钮")
+        }
+        
+    }
 }
 
 

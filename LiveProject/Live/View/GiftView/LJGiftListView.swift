@@ -12,7 +12,7 @@ protocol LJGiftListViewDelegate : class {
     func giftListView(_ giftListView : LJGiftListView, giftModel : LJGiftModel)
 }
 
-class LJGiftListView: UIView {
+class LJGiftListView: UIView, NibLoadable {
     
     @IBOutlet weak var giftView: UIView!
     

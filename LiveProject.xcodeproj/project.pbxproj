@@ -30,10 +30,10 @@
 		9705CAC41F568EFF00A197BA /* LJEmoticonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CAC31F568EFF00A197BA /* LJEmoticonModel.swift */; };
 		9705CAC61F568FC300A197BA /* LJEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CAC51F568FC300A197BA /* LJEmoticonPackage.swift */; };
 		9705CAC81F56906B00A197BA /* LJEmoticonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CAC71F56906B00A197BA /* LJEmoticonViewModel.swift */; };
+		9705CACA1F56B5C300A197BA /* Emitterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705CAC91F56B5C300A197BA /* Emitterable.swift */; };
 		971196371F3AB34F005D4FFF /* GiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971196361F3AB34F005D4FFF /* GiftView.swift */; };
 		971196391F3AB35E005D4FFF /* GiftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 971196381F3AB35E005D4FFF /* GiftView.xib */; };
 		9711963B1F3AB4CE005D4FFF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711963A1F3AB4CE005D4FFF /* BaseView.swift */; };
-		9711963D1F3AB79C005D4FFF /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711963C1F3AB79C005D4FFF /* NibLoadable.swift */; };
 		9711963F1F3AD5B5005D4FFF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711963E1F3AD5B5005D4FFF /* Person.swift */; };
 		971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971196421F3B3603005D4FFF /* LoginViewController.swift */; };
 		971196451F3B3603005D4FFF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 971196431F3B3603005D4FFF /* LoginViewController.xib */; };
@@ -50,6 +50,7 @@
 		972BD70E1F3226D2001C6172 /* LJFoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD70D1F3226D2001C6172 /* LJFoundController.swift */; };
 		972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7101F3226E6001C6172 /* LJMineController.swift */; };
 		972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7131F3226F0001C6172 /* LJRankController.swift */; };
+		972E1FC01F56B93D0029876E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FBF1F56B93D0029876E /* NibLoadable.swift */; };
 		9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04D1F3C292700C26CCE /* Shakeable.swift */; };
 		9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04F1F3C2CD500C26CCE /* Flashable.swift */; };
 		9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */; };
@@ -127,10 +128,10 @@
 		9705CAC31F568EFF00A197BA /* LJEmoticonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJEmoticonModel.swift; sourceTree = "<group>"; };
 		9705CAC51F568FC300A197BA /* LJEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJEmoticonPackage.swift; sourceTree = "<group>"; };
 		9705CAC71F56906B00A197BA /* LJEmoticonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJEmoticonViewModel.swift; sourceTree = "<group>"; };
+		9705CAC91F56B5C300A197BA /* Emitterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emitterable.swift; sourceTree = "<group>"; };
 		971196361F3AB34F005D4FFF /* GiftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftView.swift; sourceTree = "<group>"; };
 		971196381F3AB35E005D4FFF /* GiftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftView.xib; sourceTree = "<group>"; };
 		9711963A1F3AB4CE005D4FFF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		9711963C1F3AB79C005D4FFF /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		9711963E1F3AD5B5005D4FFF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		971196421F3B3603005D4FFF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		971196431F3B3603005D4FFF /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		972BD70D1F3226D2001C6172 /* LJFoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJFoundController.swift; sourceTree = "<group>"; };
 		972BD7101F3226E6001C6172 /* LJMineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJMineController.swift; sourceTree = "<group>"; };
 		972BD7131F3226F0001C6172 /* LJRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRankController.swift; sourceTree = "<group>"; };
+		972E1FBF1F56B93D0029876E /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		9732B04D1F3C292700C26CCE /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		9732B04F1F3C2CD500C26CCE /* Flashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashable.swift; sourceTree = "<group>"; };
 		9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGifImageManager.swift; sourceTree = "<group>"; };
@@ -479,7 +481,6 @@
 				971196361F3AB34F005D4FFF /* GiftView.swift */,
 				971196381F3AB35E005D4FFF /* GiftView.xib */,
 				9711963A1F3AB4CE005D4FFF /* BaseView.swift */,
-				9711963C1F3AB79C005D4FFF /* NibLoadable.swift */,
 				9711963E1F3AD5B5005D4FFF /* Person.swift */,
 				971196421F3B3603005D4FFF /* LoginViewController.swift */,
 				971196431F3B3603005D4FFF /* LoginViewController.xib */,
@@ -568,10 +569,12 @@
 		97C8FA4D1F32C6A7008025BC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				9705CAB11F56561400A197BA /* Requestable.swift */,
 				97C8FA4E1F32C6C3008025BC /* LJNetWorkManager.swift */,
 				97C6799F1F4FCE110045CB59 /* LJAttributeStringGenerator.swift */,
 				9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */,
+				972E1FBF1F56B93D0029876E /* NibLoadable.swift */,
+				9705CAB11F56561400A197BA /* Requestable.swift */,
+				9705CAC91F56B5C300A197BA /* Emitterable.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				972BD7061F3226BA001C6172 /* AppDelegate.swift in Sources */,
+				9705CACA1F56B5C300A197BA /* Emitterable.swift in Sources */,
 				97C8FA4C1F32C0F0008025BC /* AnchorModel.swift in Sources */,
 				971196371F3AB34F005D4FFF /* GiftView.swift in Sources */,
 				978F90D91F2732A8002624BE /* LJPageView.swift in Sources */,
@@ -893,6 +897,7 @@
 				9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */,
 				972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */,
 				9705CAAE1F56555000A197BA /* ViewController.swift in Sources */,
+				972E1FC01F56B93D0029876E /* NibLoadable.swift in Sources */,
 				972BD7001F3222BD001C6172 /* LJAnchorController.swift in Sources */,
 				9705CA9F1F555E5300A197BA /* LJChatContentView.swift in Sources */,
 				9705CAA71F5650F400A197BA /* LJGiftListView.swift in Sources */,
@@ -905,7 +910,6 @@
 				978F90E11F273614002624BE /* LJPageStyle.swift in Sources */,
 				97C8FA5B1F34201A008025BC /* LJPageCollectionLayout.swift in Sources */,
 				9705CAB01F56557300A197BA /* LJGiftController.swift in Sources */,
-				9711963D1F3AB79C005D4FFF /* NibLoadable.swift in Sources */,
 				97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */,
 				97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */,
 				9705CA991F55188A00A197BA /* LJRoomController.swift in Sources */,

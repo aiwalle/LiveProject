@@ -35,30 +35,45 @@
                             <state key="normal" image="room_btn_chat">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="6Yf-Nf-kgF"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGy-39-yJP">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGy-39-yJP">
                             <rect key="frame" x="75" y="0.0" width="75" height="44"/>
                             <state key="normal" image="menu_btn_share">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="AXc-4e-QoF"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-B8-9Ns">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqH-B8-9Ns">
                             <rect key="frame" x="150" y="0.0" width="75" height="44"/>
                             <state key="normal" image="room_btn_gift">
                                 <color key="titleColor" red="1" green="0.50532664559999996" blue="0.034178830219999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="ghD-xG-Os7"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-np-Chk">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-np-Chk">
                             <rect key="frame" x="225" y="0.0" width="75" height="44"/>
                             <state key="normal" image="room_btn_more">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="pDo-bV-j84"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTC-gO-Kc6">
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTC-gO-Kc6">
                             <rect key="frame" x="300" y="0.0" width="75" height="44"/>
                             <state key="normal" image="room_btn_qfstar">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="Jcs-VA-By3"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

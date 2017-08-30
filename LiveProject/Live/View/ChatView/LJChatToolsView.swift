@@ -8,18 +8,27 @@
 
 import UIKit
 
+protocol LJChatToolsViewDelegate : class {
+    func chatToolsView(_ chatToolsView: LJChatToolsView, message : String)
+}
+
+
 class LJChatToolsView: UIView {
 
-    fileprivate lazy var inputTextField : UITextField = UITextField(frame: CGRect(x: kChatToolsViewMargin, y: kChatToolsViewMargin, width: kDeviceWidth - kChatToolsViewMargin * 3 - 60, height: self.bounds.height - kChatToolsViewMargin * 2))
+    weak open var delegate : LJChatToolsViewDelegate?
+    
+    
+    lazy var inputTextField : UITextField = UITextField()
     
     fileprivate lazy var sendMsgBtn: UIButton = {
         let btn = UIButton(type: UIButtonType.custom)
-        btn.frame = CGRect(x: self.inputTextField.frame.maxX + kChatToolsViewMargin, y: kChatToolsViewMargin, width: 60, height: self.bounds.height - kChatToolsViewMargin * 2)
+        
         btn.setTitle("发送", for: UIControlState.normal)
         btn.backgroundColor = UIColor.orange
         btn.setTitleColor(UIColor.white, for: UIControlState.normal)
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15.0)
         btn.addTarget(self, action: #selector(sendMsgBtnClick(_ :)), for: UIControlEvents.touchUpInside)
+        btn.isEnabled = false
         return btn
     }()
     
@@ -44,6 +53,13 @@ class LJChatToolsView: UIView {
         setupUI()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        inputTextField.frame = CGRect(x: kChatToolsViewMargin, y: kChatToolsViewMargin, width: kDeviceWidth - kChatToolsViewMargin * 3 - 60, height: self.bounds.height - kChatToolsViewMargin * 2)
+        
+        sendMsgBtn.frame = CGRect(x: self.inputTextField.frame.maxX + kChatToolsViewMargin, y: kChatToolsViewMargin, width: 60, height: self.bounds.height - kChatToolsViewMargin * 2)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -58,12 +74,33 @@ extension LJChatToolsView {
         inputTextField.rightView = emoticonBtn
         inputTextField.rightViewMode = .always
         inputTextField.allowsEditingTextAttributes = true
+        inputTextField.addTarget(self, action: #selector(textFieldDidEdit(_:)), for: UIControlEvents.editingChanged)
+        
+        
+        emoticonView.emoticonClickCallback = { [weak self] emoticon in
+            if emoticon.emoticonName == "delete-n" {
+                self?.inputTextField.deleteBackward()
+                return
+            }
+            
+            guard let range = self?.inputTextField.selectedTextRange else { return }
+            self?.inputTextField.replace(range, withText: emoticon.emoticonName)
+            
+        }
     }
 }
 
 extension LJChatToolsView {
+    @objc fileprivate func textFieldDidEdit(_ textField : UITextField) {
+        sendMsgBtn.isEnabled = textField.text?.characters.count != 0
+    }
+    
+    
     @objc fileprivate func sendMsgBtnClick(_ sender : UIButton) {
-        
+        let message = inputTextField.text!
+        inputTextField.text = ""
+        sender.isEnabled = false
+        delegate?.chatToolsView(self, message: message)
     }
     
     @objc fileprivate func emoticonBtnClick(_ btn : UIButton) {
