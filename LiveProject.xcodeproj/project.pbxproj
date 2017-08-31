@@ -51,6 +51,14 @@
 		972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7101F3226E6001C6172 /* LJMineController.swift */; };
 		972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7131F3226F0001C6172 /* LJRankController.swift */; };
 		972E1FC01F56B93D0029876E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FBF1F56B93D0029876E /* NibLoadable.swift */; };
+		972E1FCA1F57E3CF0029876E /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 972E1FC11F57E3CF0029876E /* IMMessage.proto */; };
+		972E1FCB1F57E3CF0029876E /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC21F57E3CF0029876E /* Immessage.proto.swift */; };
+		972E1FCC1F57E3CF0029876E /* LJSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC31F57E3CF0029876E /* LJSocket.swift */; };
+		972E1FCD1F57E3CF0029876E /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC51F57E3CF0029876E /* ysocket.swift */; };
+		972E1FCE1F57E3CF0029876E /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC61F57E3CF0029876E /* ytcpsocket.c */; };
+		972E1FCF1F57E3CF0029876E /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC71F57E3CF0029876E /* ytcpsocket.swift */; };
+		972E1FD01F57E3CF0029876E /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC81F57E3CF0029876E /* yudpsocket.c */; };
+		972E1FD11F57E3CF0029876E /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FC91F57E3CF0029876E /* yudpsocket.swift */; };
 		9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04D1F3C292700C26CCE /* Shakeable.swift */; };
 		9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04F1F3C2CD500C26CCE /* Flashable.swift */; };
 		9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */; };
@@ -149,6 +157,14 @@
 		972BD7101F3226E6001C6172 /* LJMineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJMineController.swift; sourceTree = "<group>"; };
 		972BD7131F3226F0001C6172 /* LJRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRankController.swift; sourceTree = "<group>"; };
 		972E1FBF1F56B93D0029876E /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		972E1FC11F57E3CF0029876E /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
+		972E1FC21F57E3CF0029876E /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		972E1FC31F57E3CF0029876E /* LJSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJSocket.swift; sourceTree = "<group>"; };
+		972E1FC51F57E3CF0029876E /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		972E1FC61F57E3CF0029876E /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		972E1FC71F57E3CF0029876E /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		972E1FC81F57E3CF0029876E /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		972E1FC91F57E3CF0029876E /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		9732B04D1F3C292700C26CCE /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		9732B04F1F3C2CD500C26CCE /* Flashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashable.swift; sourceTree = "<group>"; };
 		9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGifImageManager.swift; sourceTree = "<group>"; };
@@ -269,6 +285,10 @@
 		9705CA941F5513E800A197BA /* Socket */ = {
 			isa = PBXGroup;
 			children = (
+				972E1FC41F57E3CF0029876E /* ysocket */,
+				972E1FC31F57E3CF0029876E /* LJSocket.swift */,
+				972E1FC21F57E3CF0029876E /* Immessage.proto.swift */,
+				972E1FC11F57E3CF0029876E /* IMMessage.proto */,
 			);
 			path = Socket;
 			sourceTree = "<group>";
@@ -398,6 +418,18 @@
 				972BD7131F3226F0001C6172 /* LJRankController.swift */,
 			);
 			path = Rank;
+			sourceTree = "<group>";
+		};
+		972E1FC41F57E3CF0029876E /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				972E1FC51F57E3CF0029876E /* ysocket.swift */,
+				972E1FC61F57E3CF0029876E /* ytcpsocket.c */,
+				972E1FC71F57E3CF0029876E /* ytcpsocket.swift */,
+				972E1FC81F57E3CF0029876E /* yudpsocket.c */,
+				972E1FC91F57E3CF0029876E /* yudpsocket.swift */,
+			);
+			path = ysocket;
 			sourceTree = "<group>";
 		};
 		9747D0D41F53C0FF009CFB21 /* macSocket_server */ = {
@@ -750,6 +782,7 @@
 				9705CA9A1F55188A00A197BA /* LJRoomController.xib in Resources */,
 				9705CAB61F56562700A197BA /* GiftViewCell.xib in Resources */,
 				975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */,
+				972E1FCA1F57E3CF0029876E /* IMMessage.proto in Resources */,
 				97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,12 +925,16 @@
 				971196371F3AB34F005D4FFF /* GiftView.swift in Sources */,
 				978F90D91F2732A8002624BE /* LJPageView.swift in Sources */,
 				972BD7071F3226BA001C6172 /* LJNavigationCotroller.swift in Sources */,
+				972E1FD11F57E3CF0029876E /* yudpsocket.swift in Sources */,
 				9705CAAD1F56555000A197BA /* TestSwiftController.swift in Sources */,
 				9705CAB51F56562700A197BA /* GiftViewCell.swift in Sources */,
 				9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */,
 				972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */,
 				9705CAAE1F56555000A197BA /* ViewController.swift in Sources */,
 				972E1FC01F56B93D0029876E /* NibLoadable.swift in Sources */,
+				972E1FCC1F57E3CF0029876E /* LJSocket.swift in Sources */,
+				972E1FD01F57E3CF0029876E /* yudpsocket.c in Sources */,
+				972E1FCE1F57E3CF0029876E /* ytcpsocket.c in Sources */,
 				972BD7001F3222BD001C6172 /* LJAnchorController.swift in Sources */,
 				9705CA9F1F555E5300A197BA /* LJChatContentView.swift in Sources */,
 				9705CAA71F5650F400A197BA /* LJGiftListView.swift in Sources */,
@@ -922,6 +959,7 @@
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				9705CAC61F568FC300A197BA /* LJEmoticonPackage.swift in Sources */,
 				971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */,
+				972E1FCF1F57E3CF0029876E /* ytcpsocket.swift in Sources */,
 				97C679A01F4FCE110045CB59 /* LJAttributeStringGenerator.swift in Sources */,
 				9705CAC81F56906B00A197BA /* LJEmoticonViewModel.swift in Sources */,
 				972BD6FC1F321AF0001C6172 /* HomeType.swift in Sources */,
@@ -935,10 +973,12 @@
 				9705CAC41F568EFF00A197BA /* LJEmoticonModel.swift in Sources */,
 				9711963B1F3AB4CE005D4FFF /* BaseView.swift in Sources */,
 				975F293C1F3867D90049B848 /* EmoticonView.swift in Sources */,
+				972E1FCD1F57E3CF0029876E /* ysocket.swift in Sources */,
 				9711963F1F3AD5B5005D4FFF /* Person.swift in Sources */,
 				97C8FA4A1F32C02D008025BC /* LJHomeViewModel.swift in Sources */,
 				9705CAC01F56692F00A197BA /* LJEmoticonView.swift in Sources */,
 				9705CABB1F56564900A197BA /* LJGiftModel.swift in Sources */,
+				972E1FCB1F57E3CF0029876E /* Immessage.proto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

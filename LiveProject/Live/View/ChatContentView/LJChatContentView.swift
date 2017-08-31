@@ -13,7 +13,7 @@ class LJChatContentView: UIView {
     fileprivate lazy var messages : [NSAttributedString] = [NSAttributedString]()
     
     fileprivate lazy var tableView : UITableView = {
-        let tableView = UITableView(frame: self.frame)
+        let tableView = UITableView()
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.clear
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
@@ -30,6 +30,11 @@ class LJChatContentView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        tableView.frame = self.bounds
     }
     
     func insertMsg(_ message : NSAttributedString) {

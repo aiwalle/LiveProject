@@ -15,8 +15,8 @@ class LJAttributeStringGenerator {
 
 extension LJAttributeStringGenerator {
     class func generateRoom(isJoin : Bool, userName : String) -> NSAttributedString {
-        let roomMsg = isJoin ? "join" : "leave"
-        let message = "\(userName)\(roomMsg) Room"
+        let roomMsg = isJoin ? "进入" : "离开"
+        let message = "\(userName)\(roomMsg)房间"
         let range = NSRange(location: 0, length: userName.characters.count)
         let attributeString = NSMutableAttributedString(string: message)
         attributeString.setAttributes([NSForegroundColorAttributeName : UIColor.red], range: range)
@@ -61,14 +61,14 @@ extension LJAttributeStringGenerator {
     }
     
     class func generateGiftMessage(_ userName : String,_ giftname : String,_ giftURL : String,_ fontHeight : CGFloat) -> NSAttributedString {
-        let message = "\(userName)give\(giftname)"
+        let message = "\(userName) 赠送给主播 \(giftname)"
         
         let range = NSRange(location: 0, length: userName.characters.count)
         let attributeString = NSMutableAttributedString(string: message)
         attributeString.setAttributes([NSForegroundColorAttributeName : UIColor.red], range: range)
         
         let giftRange = (message as NSString).range(of: giftname)
-        attributeString.setAttributes([NSForegroundColorAttributeName : UIColor.yellow], range: giftRange)
+        attributeString.setAttributes([NSForegroundColorAttributeName : UIColor.blue], range: giftRange)
         
         guard let image = KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: giftURL) else {
             return attributeString

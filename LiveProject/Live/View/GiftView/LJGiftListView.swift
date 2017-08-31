@@ -108,6 +108,6 @@ extension LJGiftListView {
         let giftPackage = giftViewModel.data[(currentIndexPath?.section)!]
         let giftModel = giftPackage.list[(currentIndexPath?.item)!]
         delegate?.giftListView(self, giftModel: giftModel)
-        sender.isEnabled = false
+//        sender.isEnabled = false
     }
 }

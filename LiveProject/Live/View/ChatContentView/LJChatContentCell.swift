@@ -14,7 +14,10 @@ class LJChatContentCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentLabel = UILabel()
+        contentLabel.font = UIFont.systemFont(ofSize: 15)
         self.contentView.addSubview(contentLabel)
+        
     }
     
     override func layoutSubviews() {
