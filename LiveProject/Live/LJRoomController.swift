@@ -9,8 +9,8 @@
 import UIKit
 
 private let kChatToolsViewHeight : CGFloat = 44
-private let kGiftlistViewHeight : CGFloat = kDeviceHeight * 0.5
 private let kChatContentViewHeight : CGFloat = 200
+let kGiftlistViewHeight : CGFloat = kDeviceHeight * 0.5
 
 class LJRoomController: UIViewController, Emitterable {
     @IBOutlet weak var bgImageView: UIImageView!
@@ -65,7 +65,7 @@ extension  LJRoomController {
 //        chatToolsView.delegate = self
         view.addSubview(chatToolsView)
         
-        // 设置giftListView
+        // 设置giftListView 368.0
         giftListView.frame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: kGiftlistViewHeight)
         giftListView.autoresizingMask = [.flexibleTopMargin, .flexibleWidth]
         view.addSubview(giftListView)

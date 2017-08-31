@@ -30,6 +30,13 @@ class LJGiftListView: UIView, NibLoadable {
         loadData()
         
     }
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        var pageViewFrame = giftView.bounds
+//        
+//        pageCv.frame = pageViewFrame
+//    }
 }
 
 extension LJGiftListView {
@@ -47,6 +54,14 @@ extension LJGiftListView {
         
         var pageViewFrame = giftView.bounds
         pageViewFrame.size.width = kDeviceWidth
+        /* 这里获取到的高度有问题，bug
+           由于获取到的高度有问题，因此内部控件都根据这个高度设定好了
+           哪怕在layousubviews中重新设定frame也无效
+        */
+        
+        let scale = giftView.bounds.size.height / self.bounds.size.height
+        let actualHeight = kGiftlistViewHeight * scale
+        pageViewFrame.size.height = actualHeight
         pageCv = LJPageCollectionView(frame: pageViewFrame, titles: ["热门", "高级", "豪华", "专属"], style: style, isTitleInTop: true, layout: layout)
         pageCv.registerNib(UINib(nibName: "GiftViewCell", bundle: nil), forCellWithReuseIdentifier: kPageControllerCellID)
         
