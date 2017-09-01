@@ -101,7 +101,13 @@ extension LJContentView : UICollectionViewDelegate {
         }
     }
     
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        // 这里有个bug，快速拖动标题会出现两个红色的
+        scrollView.isScrollEnabled = false
+    }
+    
     func scrollViewDidEndScroll(_ scrollView: UIScrollView) {
+        scrollView.isScrollEnabled = true
         let index = collectionView.contentOffset.x / collectionView.bounds.width
         delegate?.contentView(self, didEndScroll: Int(index))
     }
