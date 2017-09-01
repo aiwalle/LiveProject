@@ -8,7 +8,9 @@ target 'LiveProject' do
   # Pods for LiveProject
     pod 'Alamofire', '~> 4.5.0'
     pod 'Kingfisher', '~> 3.10.3'
-    pod 'ProtocolBuffers-Swift'
+    pod 'ProtocolBuffers-Swift', '~> 3.0.21'
+    pod 'YYWebImage', '~> 1.0.5'
+    pod 'ZipArchive', '~> 1.4.0'
 end
 
 target 'clientSocket' do
