@@ -63,6 +63,7 @@
 		972E1FEB1F5ACC390029876E /* LJDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FEA1F5ACC390029876E /* LJDigitLabel.swift */; };
 		972E1FED1F5ACC870029876E /* LJGiftAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FEC1F5ACC870029876E /* LJGiftAnimationModel.swift */; };
 		972E1FEF1F5ACC9F0029876E /* LJGiftContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FEE1F5ACC9F0029876E /* LJGiftContainerView.swift */; };
+		972E1FF11F5C246B0029876E /* LJGiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972E1FF01F5C246B0029876E /* LJGiftChannelView.xib */; };
 		9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04D1F3C292700C26CCE /* Shakeable.swift */; };
 		9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732B04F1F3C2CD500C26CCE /* Flashable.swift */; };
 		9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */; };
@@ -173,6 +174,7 @@
 		972E1FEA1F5ACC390029876E /* LJDigitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJDigitLabel.swift; sourceTree = "<group>"; };
 		972E1FEC1F5ACC870029876E /* LJGiftAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftAnimationModel.swift; sourceTree = "<group>"; };
 		972E1FEE1F5ACC9F0029876E /* LJGiftContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftContainerView.swift; sourceTree = "<group>"; };
+		972E1FF01F5C246B0029876E /* LJGiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJGiftChannelView.xib; sourceTree = "<group>"; };
 		9732B04D1F3C292700C26CCE /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 		9732B04F1F3C2CD500C26CCE /* Flashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashable.swift; sourceTree = "<group>"; };
 		9747D0CB1F53A216009CFB21 /* LJGifImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGifImageManager.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			children = (
 				972E1FEA1F5ACC390029876E /* LJDigitLabel.swift */,
 				972E1FE81F5ACC1C0029876E /* LJGiftChannelView.swift */,
+				972E1FF01F5C246B0029876E /* LJGiftChannelView.xib */,
 				972E1FEE1F5ACC9F0029876E /* LJGiftContainerView.swift */,
 			);
 			path = GiftAnimation;
@@ -792,6 +795,7 @@
 			files = (
 				971196391F3AB35E005D4FFF /* GiftView.xib in Resources */,
 				9747D0CE1F53A557009CFB21 /* timg.gif in Resources */,
+				972E1FF11F5C246B0029876E /* LJGiftChannelView.xib in Resources */,
 				978F90AA1F271EF9002624BE /* LaunchScreen.storyboard in Resources */,
 				978F90A71F271EF9002624BE /* Assets.xcassets in Resources */,
 				972BD6F61F3218BB001C6172 /* types.plist in Resources */,

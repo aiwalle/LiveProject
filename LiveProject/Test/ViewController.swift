@@ -97,7 +97,7 @@ extension ViewController : UICollectionViewDelegate {
 
 extension ViewController : LJWaterFallLayoutDataSource {
     func waterFallLayout(_ layout: LJWaterFallLayout, itemIndex: Int) -> CGFloat {
-        let screenW = UIScreen.main.bounds.width
+//        let screenW = UIScreen.main.bounds.width
 //        return itemIndex % 2 == 0 ? screenW * 2 / 3 : screenW * 0.5
         return CGFloat(arc4random_uniform(150) + 80)
     }

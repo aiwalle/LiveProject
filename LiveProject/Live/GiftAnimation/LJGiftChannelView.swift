@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LJGiftChannelView: UIView {
+class LJGiftChannelView: UIView, NibLoadable {
 
     /*
     // Only override draw() if you perform custom drawing.
