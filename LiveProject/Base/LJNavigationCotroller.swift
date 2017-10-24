@@ -10,6 +10,7 @@ import UIKit
 
 class LJNavigationCotroller: UINavigationController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,13 +40,15 @@ class LJNavigationCotroller: UINavigationController {
         panGes.delegate = self
         view.addGestureRecognizer(panGes)
         
-        
+        navigationBar.barTintColor = UIColor.black
     }
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.childViewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
-            navigationBar.barTintColor = .white
+//            navigationBar.barTintColor = .white
+            
+            setupCustomBackButtonItem(viewController)
         }
         
         super.pushViewController(viewController, animated: animated)
@@ -53,9 +56,9 @@ class LJNavigationCotroller: UINavigationController {
 
     
     override func popViewController(animated: Bool) -> UIViewController? {
-        if self.childViewControllers.count < 3 {
-            navigationBar.barTintColor = .black
-        }
+//        if self.childViewControllers.count < 3 {
+//            navigationBar.barTintColor = .black
+//        }
         return super.popViewController(animated: animated)
     }
     
@@ -68,5 +71,28 @@ extension LJNavigationCotroller : UIGestureRecognizerDelegate {
             return true
         }
         return false
+    }
+}
+
+extension LJNavigationCotroller {
+    fileprivate func setupCustomBackButtonItem(_ viewController: UIViewController) {
+        let backBtn = UIButton(type: .custom)
+        backBtn.setTitle("返回", for: .normal)
+        backBtn.setTitleColor(.white, for: .normal)
+        backBtn.setImage(UIImage(named: "back"), for: .normal)
+        backBtn.sizeToFit()
+        backBtn.addTarget(self, action: #selector(backButtonItemClick), for: .touchUpInside)
+        backBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+        
+        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
+        
+    }
+    
+    @objc fileprivate func backButtonItemClick() {
+        if self.childViewControllers.count <= 1{
+            
+        } else {
+            _ = self.popViewController(animated: true)
+        }
     }
 }

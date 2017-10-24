@@ -53,9 +53,19 @@ class HomeViewCell: UICollectionViewCell {
     
     class func cellWithCollectionView(_ collectionView : UICollectionView, indexPath : NSIndexPath) -> HomeViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kAnchorControllerCellID, for: indexPath as IndexPath) as! HomeViewCell
-        cell.setupUI()
         return cell
     }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()

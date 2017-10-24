@@ -112,6 +112,14 @@
 		97C8FA5B1F34201A008025BC /* LJPageCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C8FA5A1F34201A008025BC /* LJPageCollectionLayout.swift */; };
 		97CC22D31F62669D0066CF9B /* LJGiftAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC22D21F62669D0066CF9B /* LJGiftAnimationModel.swift */; };
 		97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */; };
+		EC2C24AF1F9F1FB300605058 /* LJSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C24AE1F9F1FB300605058 /* LJSettingsViewController.swift */; };
+		EC6D783E1F9EDCD6001F6513 /* LJBaseMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D783D1F9EDCD6001F6513 /* LJBaseMineController.swift */; };
+		EC6D78411F9EDF6E001F6513 /* LJMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D783F1F9EDF6E001F6513 /* LJMineCell.swift */; };
+		EC6D78421F9EDF6E001F6513 /* LJMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6D78401F9EDF6E001F6513 /* LJMineCell.xib */; };
+		EC6D78441F9EEA58001F6513 /* LJMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78431F9EEA58001F6513 /* LJMineHeaderView.swift */; };
+		EC6D78461F9EEA67001F6513 /* LJMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */; };
+		EC6D78481F9F0C23001F6513 /* LJSettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */; };
+		EC6D784A1F9F0C4E001F6513 /* LJSettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +237,14 @@
 		97C8FA5A1F34201A008025BC /* LJPageCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJPageCollectionLayout.swift; sourceTree = "<group>"; };
 		97CC22D21F62669D0066CF9B /* LJGiftAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftAnimationModel.swift; sourceTree = "<group>"; };
 		97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJWaterFallLayout.swift; sourceTree = "<group>"; };
+		EC2C24AE1F9F1FB300605058 /* LJSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsViewController.swift; sourceTree = "<group>"; };
+		EC6D783D1F9EDCD6001F6513 /* LJBaseMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJBaseMineController.swift; sourceTree = "<group>"; };
+		EC6D783F1F9EDF6E001F6513 /* LJMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJMineCell.swift; sourceTree = "<group>"; };
+		EC6D78401F9EDF6E001F6513 /* LJMineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJMineCell.xib; sourceTree = "<group>"; };
+		EC6D78431F9EEA58001F6513 /* LJMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJMineHeaderView.swift; sourceTree = "<group>"; };
+		EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJMineHeaderView.xib; sourceTree = "<group>"; };
+		EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsSectionModel.swift; sourceTree = "<group>"; };
+		EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsItemModel.swift; sourceTree = "<group>"; };
 		F579E90E35C8EB4D74D64261 /* Pods-clientSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-clientSocket/Pods-clientSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -418,6 +434,9 @@
 		972BD70F1F3226E6001C6172 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				EC6D783A1F9EDAB7001F6513 /* Model */,
+				EC6D783B1F9EDAC5001F6513 /* View */,
+				EC6D783C1F9EDAD5001F6513 /* Controller */,
 				972BD7101F3226E6001C6172 /* LJMineController.swift */,
 			);
 			path = Mine;
@@ -661,6 +680,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC6D783A1F9EDAB7001F6513 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */,
+				EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC6D783B1F9EDAC5001F6513 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D783F1F9EDF6E001F6513 /* LJMineCell.swift */,
+				EC6D78401F9EDF6E001F6513 /* LJMineCell.xib */,
+				EC6D78431F9EEA58001F6513 /* LJMineHeaderView.swift */,
+				EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC6D783C1F9EDAD5001F6513 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D783D1F9EDCD6001F6513 /* LJBaseMineController.swift */,
+				EC2C24AE1F9F1FB300605058 /* LJSettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -727,6 +775,7 @@
 		978F90941F271EF9002624BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LJ;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = liang;
@@ -805,8 +854,10 @@
 				9705CAA91F56510500A197BA /* LJGiftListView.xib in Resources */,
 				9705CA9A1F55188A00A197BA /* LJRoomController.xib in Resources */,
 				9705CAB61F56562700A197BA /* GiftViewCell.xib in Resources */,
+				EC6D78461F9EEA67001F6513 /* LJMineHeaderView.xib in Resources */,
 				975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */,
 				972E1FCA1F57E3CF0029876E /* IMMessage.proto in Resources */,
+				EC6D78421F9EDF6E001F6513 /* LJMineCell.xib in Resources */,
 				97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -973,6 +1024,7 @@
 				97C8FA4C1F32C0F0008025BC /* AnchorModel.swift in Sources */,
 				971196371F3AB34F005D4FFF /* GiftView.swift in Sources */,
 				978F90D91F2732A8002624BE /* LJPageView.swift in Sources */,
+				EC6D784A1F9F0C4E001F6513 /* LJSettingsItemModel.swift in Sources */,
 				972BD7071F3226BA001C6172 /* LJNavigationCotroller.swift in Sources */,
 				972E1FD11F57E3CF0029876E /* yudpsocket.swift in Sources */,
 				9705CAAD1F56555000A197BA /* TestSwiftController.swift in Sources */,
@@ -987,8 +1039,11 @@
 				972BD7001F3222BD001C6172 /* LJAnchorController.swift in Sources */,
 				972E1FEF1F5ACC9F0029876E /* LJGiftContainerView.swift in Sources */,
 				9705CA9F1F555E5300A197BA /* LJChatContentView.swift in Sources */,
+				EC6D78481F9F0C23001F6513 /* LJSettingsSectionModel.swift in Sources */,
 				9705CAA71F5650F400A197BA /* LJGiftListView.swift in Sources */,
+				EC2C24AF1F9F1FB300605058 /* LJSettingsViewController.swift in Sources */,
 				972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */,
+				EC6D783E1F9EDCD6001F6513 /* LJBaseMineController.swift in Sources */,
 				9747D0CC1F53A216009CFB21 /* LJGifImageManager.swift in Sources */,
 				972BD7021F32263A001C6172 /* LJHomeController.swift in Sources */,
 				972BD70B1F3226C9001C6172 /* UIColor-Extension.swift in Sources */,
@@ -1010,10 +1065,12 @@
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				9705CAC61F568FC300A197BA /* LJEmoticonPackage.swift in Sources */,
 				971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */,
+				EC6D78441F9EEA58001F6513 /* LJMineHeaderView.swift in Sources */,
 				972E1FCF1F57E3CF0029876E /* ytcpsocket.swift in Sources */,
 				97C679A01F4FCE110045CB59 /* LJAttributeStringGenerator.swift in Sources */,
 				9705CAC81F56906B00A197BA /* LJEmoticonViewModel.swift in Sources */,
 				972BD6FC1F321AF0001C6172 /* HomeType.swift in Sources */,
+				EC6D78411F9EDF6E001F6513 /* LJMineCell.swift in Sources */,
 				97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */,
 				978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */,
 				97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */,
