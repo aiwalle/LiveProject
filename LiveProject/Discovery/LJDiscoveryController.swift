@@ -1,5 +1,5 @@
 //
-//  LJFoundController.swift
+//  LJDiscoveryController.swift
 //  LiveProject
 //
 //  Created by liang on 2017/7/28.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class LJFoundController: UIViewController {
+class LJDiscoveryController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class LJFoundController: UIViewController {
     }
 }
 
-extension LJFoundController: LJPageCollectionViewDataSource {
+extension LJDiscoveryController: LJPageCollectionViewDataSource {
     func numberOfSectionInPageCollectionView(_ pageCollectionView: LJPageCollectionView) -> Int {
         return 4
     }

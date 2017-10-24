@@ -47,7 +47,7 @@
 		972BD7071F3226BA001C6172 /* LJNavigationCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7041F3226BA001C6172 /* LJNavigationCotroller.swift */; };
 		972BD7081F3226BA001C6172 /* LJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7051F3226BA001C6172 /* LJTabBarController.swift */; };
 		972BD70B1F3226C9001C6172 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD70A1F3226C9001C6172 /* UIColor-Extension.swift */; };
-		972BD70E1F3226D2001C6172 /* LJFoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD70D1F3226D2001C6172 /* LJFoundController.swift */; };
+		972BD70E1F3226D2001C6172 /* LJDiscoveryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD70D1F3226D2001C6172 /* LJDiscoveryController.swift */; };
 		972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7101F3226E6001C6172 /* LJMineController.swift */; };
 		972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972BD7131F3226F0001C6172 /* LJRankController.swift */; };
 		972E1FC01F56B93D0029876E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972E1FBF1F56B93D0029876E /* NibLoadable.swift */; };
@@ -166,7 +166,7 @@
 		972BD7041F3226BA001C6172 /* LJNavigationCotroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJNavigationCotroller.swift; sourceTree = "<group>"; };
 		972BD7051F3226BA001C6172 /* LJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJTabBarController.swift; sourceTree = "<group>"; };
 		972BD70A1F3226C9001C6172 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
-		972BD70D1F3226D2001C6172 /* LJFoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJFoundController.swift; sourceTree = "<group>"; };
+		972BD70D1F3226D2001C6172 /* LJDiscoveryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJDiscoveryController.swift; sourceTree = "<group>"; };
 		972BD7101F3226E6001C6172 /* LJMineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJMineController.swift; sourceTree = "<group>"; };
 		972BD7131F3226F0001C6172 /* LJRankController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJRankController.swift; sourceTree = "<group>"; };
 		972E1FBF1F56B93D0029876E /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -393,6 +393,7 @@
 		972BD6F71F321A16001C6172 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				97E639AD1F2ADDB2007D34DF /* LJWaterFallView */,
 				97C8FA511F32F1D8008025BC /* View */,
 				97C8FA471F32BFF8008025BC /* Model */,
 				97C8FA481F32BFF8008025BC /* ViewModel */,
@@ -423,12 +424,12 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		972BD70C1F3226D2001C6172 /* Found */ = {
+		972BD70C1F3226D2001C6172 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
-				972BD70D1F3226D2001C6172 /* LJFoundController.swift */,
+				972BD70D1F3226D2001C6172 /* LJDiscoveryController.swift */,
 			);
-			path = Found;
+			path = Discovery;
 			sourceTree = "<group>";
 		};
 		972BD70F1F3226E6001C6172 /* Mine */ = {
@@ -547,7 +548,7 @@
 			path = ysocket;
 			sourceTree = "<group>";
 		};
-		975F293A1F38675C0049B848 /* LoadXib */ = {
+		975F293A1F38675C0049B848 /* LoadXib(Test) */ = {
 			isa = PBXGroup;
 			children = (
 				975F293B1F3867D90049B848 /* EmoticonView.swift */,
@@ -561,7 +562,7 @@
 				9732B04D1F3C292700C26CCE /* Shakeable.swift */,
 				9732B04F1F3C2CD500C26CCE /* Flashable.swift */,
 			);
-			path = LoadXib;
+			path = "LoadXib(Test)";
 			sourceTree = "<group>";
 		};
 		978F90931F271EF8002624BE = {
@@ -589,19 +590,18 @@
 		978F909E1F271EF9002624BE /* LiveProject */ = {
 			isa = PBXGroup;
 			children = (
+				975F293A1F38675C0049B848 /* LoadXib(Test) */,
+				9705CAAA1F56555000A197BA /* Test */,
 				972BD6F41F3218BB001C6172 /* Resource */,
-				975F293A1F38675C0049B848 /* LoadXib */,
 				972BD6F81F321A44001C6172 /* Base */,
 				972BD6F71F321A16001C6172 /* Home */,
 				9705CA901F55133F00A197BA /* Live */,
-				97E639AD1F2ADDB2007D34DF /* LJWaterFallView */,
-				978F90D51F273250002624BE /* LJPageView */,
 				972BD7121F3226EF001C6172 /* Rank */,
-				972BD70C1F3226D2001C6172 /* Found */,
+				972BD70C1F3226D2001C6172 /* Discovery */,
 				972BD70F1F3226E6001C6172 /* Mine */,
 				972BD7091F3226C9001C6172 /* Extension */,
 				97C8FA4D1F32C6A7008025BC /* Tools */,
-				9705CAAA1F56555000A197BA /* Test */,
+				EC2C24B01F9F2FED00605058 /* CommonViews */,
 				978F90A31F271EF9002624BE /* Main.storyboard */,
 				978F90A61F271EF9002624BE /* Assets.xcassets */,
 				978F90A81F271EF9002624BE /* LaunchScreen.storyboard */,
@@ -678,6 +678,14 @@
 				F579E90E35C8EB4D74D64261 /* Pods-clientSocket.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC2C24B01F9F2FED00605058 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				978F90D51F273250002624BE /* LJPageView */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 		EC6D783A1F9EDAB7001F6513 /* Model */ = {
@@ -1056,7 +1064,7 @@
 				97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */,
 				9705CA991F55188A00A197BA /* LJRoomController.swift in Sources */,
 				9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */,
-				972BD70E1F3226D2001C6172 /* LJFoundController.swift in Sources */,
+				972BD70E1F3226D2001C6172 /* LJDiscoveryController.swift in Sources */,
 				9705CAA11F55621B00A197BA /* LJChatContentCell.swift in Sources */,
 				978F90DF1F273319002624BE /* LJContentView.swift in Sources */,
 				9705CAB81F56563C00A197BA /* LJGiftViewModel.swift in Sources */,
