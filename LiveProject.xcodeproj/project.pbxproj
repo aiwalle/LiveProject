@@ -113,6 +113,8 @@
 		97CC22D31F62669D0066CF9B /* LJGiftAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CC22D21F62669D0066CF9B /* LJGiftAnimationModel.swift */; };
 		97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */; };
 		EC2C24AF1F9F1FB300605058 /* LJSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C24AE1F9F1FB300605058 /* LJSettingsViewController.swift */; };
+		EC2C24B21FA0232300605058 /* LJPageTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C24B11FA0232300605058 /* LJPageTestController.swift */; };
+		EC2C24B41FA0246400605058 /* LJDiscoveryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC2C24B31FA0246400605058 /* LJDiscoveryController.storyboard */; };
 		EC6D783E1F9EDCD6001F6513 /* LJBaseMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D783D1F9EDCD6001F6513 /* LJBaseMineController.swift */; };
 		EC6D78411F9EDF6E001F6513 /* LJMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D783F1F9EDF6E001F6513 /* LJMineCell.swift */; };
 		EC6D78421F9EDF6E001F6513 /* LJMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6D78401F9EDF6E001F6513 /* LJMineCell.xib */; };
@@ -120,6 +122,13 @@
 		EC6D78461F9EEA67001F6513 /* LJMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */; };
 		EC6D78481F9F0C23001F6513 /* LJSettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */; };
 		EC6D784A1F9F0C4E001F6513 /* LJSettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */; };
+		ECE51D921FA02AF3000533A1 /* LJCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */; };
+		ECE51D941FA02AFF000533A1 /* LJCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */; };
+		ECE51D961FA02E22000533A1 /* LJDiscoveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */; };
+		ECE51D981FA02E8E000533A1 /* LJDiscoveryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D971FA02E8E000533A1 /* LJDiscoveryCollectionCell.swift */; };
+		ECE51D9B1FA02F68000533A1 /* LJCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D9A1FA02F68000533A1 /* LJCarouselModel.swift */; };
+		ECE51D9E1FA034DF000533A1 /* LJCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D9D1FA034DF000533A1 /* LJCarouselViewModel.swift */; };
+		ECE51DA01FA034F5000533A1 /* LJDiscoveryContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D9F1FA034F5000533A1 /* LJDiscoveryContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -238,6 +247,8 @@
 		97CC22D21F62669D0066CF9B /* LJGiftAnimationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJGiftAnimationModel.swift; sourceTree = "<group>"; };
 		97E639AE1F2AE0F9007D34DF /* LJWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LJWaterFallLayout.swift; sourceTree = "<group>"; };
 		EC2C24AE1F9F1FB300605058 /* LJSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsViewController.swift; sourceTree = "<group>"; };
+		EC2C24B11FA0232300605058 /* LJPageTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJPageTestController.swift; sourceTree = "<group>"; };
+		EC2C24B31FA0246400605058 /* LJDiscoveryController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LJDiscoveryController.storyboard; sourceTree = "<group>"; };
 		EC6D783D1F9EDCD6001F6513 /* LJBaseMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJBaseMineController.swift; sourceTree = "<group>"; };
 		EC6D783F1F9EDF6E001F6513 /* LJMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJMineCell.swift; sourceTree = "<group>"; };
 		EC6D78401F9EDF6E001F6513 /* LJMineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJMineCell.xib; sourceTree = "<group>"; };
@@ -245,6 +256,13 @@
 		EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJMineHeaderView.xib; sourceTree = "<group>"; };
 		EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsSectionModel.swift; sourceTree = "<group>"; };
 		EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsItemModel.swift; sourceTree = "<group>"; };
+		ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselView.swift; sourceTree = "<group>"; };
+		ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJCarouselView.xib; sourceTree = "<group>"; };
+		ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDiscoveryCell.swift; sourceTree = "<group>"; };
+		ECE51D971FA02E8E000533A1 /* LJDiscoveryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDiscoveryCollectionCell.swift; sourceTree = "<group>"; };
+		ECE51D9A1FA02F68000533A1 /* LJCarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselModel.swift; sourceTree = "<group>"; };
+		ECE51D9D1FA034DF000533A1 /* LJCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselViewModel.swift; sourceTree = "<group>"; };
+		ECE51D9F1FA034F5000533A1 /* LJDiscoveryContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDiscoveryContentViewModel.swift; sourceTree = "<group>"; };
 		F579E90E35C8EB4D74D64261 /* Pods-clientSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-clientSocket/Pods-clientSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -375,6 +393,7 @@
 				9705CAAF1F56557300A197BA /* LJGiftController.swift */,
 				9705CAAB1F56555000A197BA /* TestSwiftController.swift */,
 				9705CAAC1F56555000A197BA /* ViewController.swift */,
+				EC2C24B11FA0232300605058 /* LJPageTestController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -427,7 +446,11 @@
 		972BD70C1F3226D2001C6172 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				ECE51D9C1FA0349D000533A1 /* ViewModel */,
+				ECE51D991FA02F3A000533A1 /* Model */,
+				ECE51D901FA02AE0000533A1 /* View */,
 				972BD70D1F3226D2001C6172 /* LJDiscoveryController.swift */,
+				EC2C24B31FA0246400605058 /* LJDiscoveryController.storyboard */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -717,6 +740,34 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		ECE51D901FA02AE0000533A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */,
+				ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */,
+				ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */,
+				ECE51D971FA02E8E000533A1 /* LJDiscoveryCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECE51D991FA02F3A000533A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECE51D9A1FA02F68000533A1 /* LJCarouselModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECE51D9C1FA0349D000533A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECE51D9D1FA034DF000533A1 /* LJCarouselViewModel.swift */,
+				ECE51D9F1FA034F5000533A1 /* LJDiscoveryContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -854,6 +905,7 @@
 				9747D0CE1F53A557009CFB21 /* timg.gif in Resources */,
 				972E1FF11F5C246B0029876E /* LJGiftChannelView.xib in Resources */,
 				978F90AA1F271EF9002624BE /* LaunchScreen.storyboard in Resources */,
+				EC2C24B41FA0246400605058 /* LJDiscoveryController.storyboard in Resources */,
 				978F90A71F271EF9002624BE /* Assets.xcassets in Resources */,
 				972BD6F61F3218BB001C6172 /* types.plist in Resources */,
 				978F90A51F271EF9002624BE /* Main.storyboard in Resources */,
@@ -866,6 +918,7 @@
 				975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */,
 				972E1FCA1F57E3CF0029876E /* IMMessage.proto in Resources */,
 				EC6D78421F9EDF6E001F6513 /* LJMineCell.xib in Resources */,
+				ECE51D941FA02AFF000533A1 /* LJCarouselView.xib in Resources */,
 				97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1029,6 +1082,7 @@
 				972E1FEB1F5ACC390029876E /* LJDigitLabel.swift in Sources */,
 				972BD7061F3226BA001C6172 /* AppDelegate.swift in Sources */,
 				9705CACA1F56B5C300A197BA /* Emitterable.swift in Sources */,
+				ECE51DA01FA034F5000533A1 /* LJDiscoveryContentViewModel.swift in Sources */,
 				97C8FA4C1F32C0F0008025BC /* AnchorModel.swift in Sources */,
 				971196371F3AB34F005D4FFF /* GiftView.swift in Sources */,
 				978F90D91F2732A8002624BE /* LJPageView.swift in Sources */,
@@ -1056,12 +1110,15 @@
 				972BD7021F32263A001C6172 /* LJHomeController.swift in Sources */,
 				972BD70B1F3226C9001C6172 /* UIColor-Extension.swift in Sources */,
 				9705CABC1F56564900A197BA /* LJGiftPackage.swift in Sources */,
+				ECE51D921FA02AF3000533A1 /* LJCarouselView.swift in Sources */,
 				972BD7081F3226BA001C6172 /* LJTabBarController.swift in Sources */,
 				978F90E11F273614002624BE /* LJPageStyle.swift in Sources */,
 				97C8FA5B1F34201A008025BC /* LJPageCollectionLayout.swift in Sources */,
 				9705CAB01F56557300A197BA /* LJGiftController.swift in Sources */,
 				97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */,
 				97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */,
+				ECE51D961FA02E22000533A1 /* LJDiscoveryCell.swift in Sources */,
+				ECE51D981FA02E8E000533A1 /* LJDiscoveryCollectionCell.swift in Sources */,
 				9705CA991F55188A00A197BA /* LJRoomController.swift in Sources */,
 				9732B0501F3C2CD500C26CCE /* Flashable.swift in Sources */,
 				972BD70E1F3226D2001C6172 /* LJDiscoveryController.swift in Sources */,
@@ -1070,6 +1127,7 @@
 				9705CAB81F56563C00A197BA /* LJGiftViewModel.swift in Sources */,
 				97CC22D31F62669D0066CF9B /* LJGiftAnimationModel.swift in Sources */,
 				9705CAC21F56695800A197BA /* LJEmoticonViewCell.swift in Sources */,
+				EC2C24B21FA0232300605058 /* LJPageTestController.swift in Sources */,
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				9705CAC61F568FC300A197BA /* LJEmoticonPackage.swift in Sources */,
 				971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */,
@@ -1078,9 +1136,11 @@
 				97C679A01F4FCE110045CB59 /* LJAttributeStringGenerator.swift in Sources */,
 				9705CAC81F56906B00A197BA /* LJEmoticonViewModel.swift in Sources */,
 				972BD6FC1F321AF0001C6172 /* HomeType.swift in Sources */,
+				ECE51D9E1FA034DF000533A1 /* LJCarouselViewModel.swift in Sources */,
 				EC6D78411F9EDF6E001F6513 /* LJMineCell.swift in Sources */,
 				97E639AF1F2AE0F9007D34DF /* LJWaterFallLayout.swift in Sources */,
 				978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */,
+				ECE51D9B1FA02F68000533A1 /* LJCarouselModel.swift in Sources */,
 				97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */,
 				972E1FE91F5ACC1C0029876E /* LJGiftChannelView.swift in Sources */,
 				972BD6FE1F321D16001C6172 /* const.swift in Sources */,

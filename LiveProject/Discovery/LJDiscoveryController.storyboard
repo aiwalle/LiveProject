@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zRa-7E-ye0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Discovery Controller-->
+        <scene sceneID="0kh-FN-7V1">
+            <objects>
+                <tableViewController id="zRa-7E-ye0" customClass="LJDiscoveryController" customModule="LiveProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WDw-RV-4NP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LJDiscoveryCell" rowHeight="158" id="Uuq-cP-VV9" customClass="LJDiscoveryCell" customModule="LiveProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="158"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uuq-cP-VV9" id="xF9-PT-LJa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="157.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xz5-vg-mW0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="157.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6f2-TO-fyu" customClass="LJDiscoverContentViewLayout" customModule="LiveProject" customModuleProvider="target">
+                                                <size key="itemSize" width="129" height="153"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LJDiscoveryCollectionCell" id="cP6-ww-M6l" customClass="LJDiscoveryCollectionCell" customModule="LiveProject" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="129" height="153"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="129" height="153"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3870人观看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpb-d2-fnE">
+                                                                <rect key="frame" x="5" y="133" width="56" height="12"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="12" id="pPB-0g-SDl"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n04-4y-NIZ">
+                                                                <rect key="frame" x="5" y="113.5" width="119" height="14.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="15" id="D0D-Ev-fm2"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-Eb-1fp">
+                                                                <rect key="frame" x="0.0" y="10" width="129" height="98.5"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="TpR-Ek-7fh">
+                                                                <rect key="frame" x="101" y="15" width="23" height="13"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstItem="U9V-Eb-1fp" firstAttribute="leading" secondItem="cP6-ww-M6l" secondAttribute="leading" id="0jF-it-Z1j"/>
+                                                        <constraint firstAttribute="trailing" secondItem="n04-4y-NIZ" secondAttribute="trailing" constant="5" id="4mx-se-6kN"/>
+                                                        <constraint firstItem="n04-4y-NIZ" firstAttribute="top" secondItem="U9V-Eb-1fp" secondAttribute="bottom" constant="5" id="A8d-no-iS3"/>
+                                                        <constraint firstItem="TpR-Ek-7fh" firstAttribute="trailing" secondItem="U9V-Eb-1fp" secondAttribute="trailing" constant="-5" id="Bq5-5r-FE0"/>
+                                                        <constraint firstItem="TpR-Ek-7fh" firstAttribute="top" secondItem="U9V-Eb-1fp" secondAttribute="top" constant="5" id="GO6-JA-QLs"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qpb-d2-fnE" secondAttribute="bottom" constant="8" id="JD3-HU-gsJ"/>
+                                                        <constraint firstItem="n04-4y-NIZ" firstAttribute="leading" secondItem="qpb-d2-fnE" secondAttribute="leading" id="PDj-6T-zXR"/>
+                                                        <constraint firstItem="qpb-d2-fnE" firstAttribute="top" secondItem="n04-4y-NIZ" secondAttribute="bottom" constant="5" id="Yjc-TO-9lK"/>
+                                                        <constraint firstItem="qpb-d2-fnE" firstAttribute="leading" secondItem="cP6-ww-M6l" secondAttribute="leading" constant="5" id="kOq-7I-ajR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="U9V-Eb-1fp" secondAttribute="trailing" id="psg-k7-FeB"/>
+                                                        <constraint firstItem="U9V-Eb-1fp" firstAttribute="top" secondItem="cP6-ww-M6l" secondAttribute="top" constant="10" id="scj-0P-J1s"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="iconImageView" destination="U9V-Eb-1fp" id="uZz-oQ-sEX"/>
+                                                        <outlet property="liveImageView" destination="TpR-Ek-7fh" id="fm9-wi-Oq8"/>
+                                                        <outlet property="nickNameLabel" destination="n04-4y-NIZ" id="Gsz-oa-UT0"/>
+                                                        <outlet property="onlineLabel" destination="qpb-d2-fnE" id="huE-7v-FAN"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Uuq-cP-VV9" id="ncv-4Z-4QL"/>
+                                                <outlet property="delegate" destination="Uuq-cP-VV9" id="9vW-wb-UdF"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xz5-vg-mW0" firstAttribute="leading" secondItem="xF9-PT-LJa" secondAttribute="leading" id="3zj-oW-5BX"/>
+                                        <constraint firstAttribute="bottom" secondItem="xz5-vg-mW0" secondAttribute="bottom" id="VyZ-o9-uwN"/>
+                                        <constraint firstAttribute="trailing" secondItem="xz5-vg-mW0" secondAttribute="trailing" id="oeE-wf-r1u"/>
+                                        <constraint firstItem="xz5-vg-mW0" firstAttribute="top" secondItem="xF9-PT-LJa" secondAttribute="top" id="tiQ-Eh-fbL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionView" destination="xz5-vg-mW0" id="Bya-Ao-Hxt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zRa-7E-ye0" id="VcV-95-aWz"/>
+                            <outlet property="delegate" destination="zRa-7E-ye0" id="wRq-zq-fj9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="znY-EH-z8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="36.431784107946029"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_icon_live" width="23" height="13"/>
+    </resources>
+</document>

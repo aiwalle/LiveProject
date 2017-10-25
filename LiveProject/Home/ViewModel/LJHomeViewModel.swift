@@ -18,6 +18,8 @@ extension LJHomeViewModel {
         LJNetWorkManager.requestData(.get, URLString: "http://qf.56.com/home/v4/moreAnchor.ios", parameters: ["type" : type.type, "index" : index, "size" : 48], finishedCallBack: {(result) -> Void in
             guard let resultDict = result as? [String : Any] else { return }
             guard let messageDict = resultDict["message"] as? [String : Any] else { return }
+            
+            // 上面的转换都是字典，这个转换出来是数组，注意看有两个方括号
             guard let dataArray = messageDict["anchors"] as? [[String : Any]] else { return }
             for (index, dict) in dataArray.enumerated() {
                 
