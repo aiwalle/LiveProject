@@ -21,7 +21,7 @@ class LJDiscoveryCollectionCell: UICollectionViewCell {
             onlineLabel.text = "\(anchor.focus)人观看"
             nickNameLabel.text = anchor.name
             // work
-//            iconImageView.setImage(anchor.pic51, "home_pic_default")
+            iconImageView.setImage(anchor.pic51, "home_pic_default")
             liveImageView.isHidden = anchor.live == 0
         }
     }

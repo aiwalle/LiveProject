@@ -20,6 +20,7 @@ struct LJPageStyle {
     var bottomLineHeight : CGFloat = 2.0
     var isNeedScale : Bool = false
     var maxScale : CGFloat = 1.2
+    var titleBgColor : UIColor = .clear
     
     var coverViewColor : UIColor = .black
     var coverViewAlpha : CGFloat = 0.3

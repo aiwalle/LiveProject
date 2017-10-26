@@ -41,9 +41,7 @@ extension LJTabBarController {
     
     fileprivate func setupChildVcs() {
         addChildVc(LJHomeController(), title: "首页", normalImage: "live-n", selectedImage: "live-p")
-        addChildVc(LJRankController(), title: "排行", normalImage: "ranking-n", selectedImage: "ranking-p")
-//        addChildVc(LJDiscoveryController(), title: "发现", normalImage: "found-n", selectedImage: "found-p")
-        
+        addNoNavChildVc(LJRankController(), title: "排行", normalImage: "ranking-n", selectedImage: "ranking-p")
         addChildVcWithStoryboard("LJDiscoveryController", title: "发现", normalImage: "found-n", selectedImage: "found-p")
         addChildVc(LJMineController(), title: "我的", normalImage: "mine-n", selectedImage: "mine-p")
     }
@@ -65,7 +63,13 @@ extension LJTabBarController {
         nav.tabBarItem.image = UIImage(named: normalImage)
         nav.tabBarItem.selectedImage = UIImage(named: selectedImage)
         addChildViewController(nav)
-        
     }
-    
+    // 通过代码创建不带导航栏的Controller
+    fileprivate func addNoNavChildVc(_ childVc : UIViewController, title : String, normalImage : String, selectedImage: String) {
+        childVc.tabBarItem.title = title
+        childVc.tabBarItem.image = UIImage(named: normalImage)
+        childVc.tabBarItem.selectedImage = UIImage(named: selectedImage)
+        
+        addChildViewController(childVc)
+    }
 }

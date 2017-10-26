@@ -13,7 +13,7 @@ class HomeViewCell: UICollectionViewCell {
     var anchorModel : AnchorModel? {
         didSet {
             // work
-//            albumImageView.setImage(anchorModel!.isEvenIndex ? anchorModel?.pic74 : anchorModel?.pic51, "home_pic_default")
+            albumImageView.setImage(anchorModel!.isEvenIndex ? anchorModel?.pic74 : anchorModel?.pic51, "home_pic_default")
             liveImageView.isHidden = anchorModel?.live == 0
             nickNameLabel.text = anchorModel?.name
             onlinePeopleLabel.setTitle("\(anchorModel?.focus ?? 0)", for: .normal)

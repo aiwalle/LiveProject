@@ -66,6 +66,7 @@ class LJTitleView: UIView {
 
 extension LJTitleView {
     fileprivate func setupUI() {
+        backgroundColor = style.titleBgColor
         addSubview(scrollView)
         setupTitleLabels()
         if style.isShowBottomLine {

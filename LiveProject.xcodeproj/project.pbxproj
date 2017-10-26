@@ -122,6 +122,16 @@
 		EC6D78461F9EEA67001F6513 /* LJMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */; };
 		EC6D78481F9F0C23001F6513 /* LJSettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */; };
 		EC6D784A1F9F0C4E001F6513 /* LJSettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */; };
+		ECB705831FA20A3C00BB03DB /* LJDetailRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB705821FA20A3C00BB03DB /* LJDetailRankViewController.swift */; };
+		ECB705851FA20AE900BB03DB /* LJRankType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB705841FA20AE900BB03DB /* LJRankType.swift */; };
+		ECB705881FA20D9600BB03DB /* LJDetailRankViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB705861FA20D9600BB03DB /* LJDetailRankViewCell.swift */; };
+		ECB705891FA20D9600BB03DB /* LJDetailRankViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB705871FA20D9600BB03DB /* LJDetailRankViewCell.xib */; };
+		ECD556711FA213AC00D7DB1B /* LJWeeklyRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556701FA213AC00D7DB1B /* LJWeeklyRankViewController.swift */; };
+		ECD556731FA2160100D7DB1B /* LJNormalRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556721FA2160100D7DB1B /* LJNormalRankViewController.swift */; };
+		ECD556751FA2161300D7DB1B /* LJWeekrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556741FA2161300D7DB1B /* LJWeekrankViewController.swift */; };
+		ECD556771FA2179500D7DB1B /* LJDetailRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556761FA2179500D7DB1B /* LJDetailRankViewModel.swift */; };
+		ECD556791FA217DF00D7DB1B /* LJRankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556781FA217DF00D7DB1B /* LJRankModel.swift */; };
+		ECD5567B1FA217F900D7DB1B /* LJWeeklyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD5567A1FA217F900D7DB1B /* LJWeeklyModel.swift */; };
 		ECE51D921FA02AF3000533A1 /* LJCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */; };
 		ECE51D941FA02AFF000533A1 /* LJCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */; };
 		ECE51D961FA02E22000533A1 /* LJDiscoveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */; };
@@ -129,6 +139,8 @@
 		ECE51D9B1FA02F68000533A1 /* LJCarouselModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D9A1FA02F68000533A1 /* LJCarouselModel.swift */; };
 		ECE51D9E1FA034DF000533A1 /* LJCarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D9D1FA034DF000533A1 /* LJCarouselViewModel.swift */; };
 		ECE51DA01FA034F5000533A1 /* LJDiscoveryContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D9F1FA034F5000533A1 /* LJDiscoveryContentViewModel.swift */; };
+		ECE51DA41FA1AB8E000533A1 /* LJGiftAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51DA31FA1AB8E000533A1 /* LJGiftAnimationController.swift */; };
+		ECE51DAA1FA1AE48000533A1 /* LJSubrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51DA91FA1AE48000533A1 /* LJSubrankViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +268,16 @@
 		EC6D78451F9EEA67001F6513 /* LJMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJMineHeaderView.xib; sourceTree = "<group>"; };
 		EC6D78471F9F0C23001F6513 /* LJSettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsSectionModel.swift; sourceTree = "<group>"; };
 		EC6D78491F9F0C4E001F6513 /* LJSettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSettingsItemModel.swift; sourceTree = "<group>"; };
+		ECB705821FA20A3C00BB03DB /* LJDetailRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDetailRankViewController.swift; sourceTree = "<group>"; };
+		ECB705841FA20AE900BB03DB /* LJRankType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJRankType.swift; sourceTree = "<group>"; };
+		ECB705861FA20D9600BB03DB /* LJDetailRankViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDetailRankViewCell.swift; sourceTree = "<group>"; };
+		ECB705871FA20D9600BB03DB /* LJDetailRankViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJDetailRankViewCell.xib; sourceTree = "<group>"; };
+		ECD556701FA213AC00D7DB1B /* LJWeeklyRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeeklyRankViewController.swift; sourceTree = "<group>"; };
+		ECD556721FA2160100D7DB1B /* LJNormalRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJNormalRankViewController.swift; sourceTree = "<group>"; };
+		ECD556741FA2161300D7DB1B /* LJWeekrankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeekrankViewController.swift; sourceTree = "<group>"; };
+		ECD556761FA2179500D7DB1B /* LJDetailRankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDetailRankViewModel.swift; sourceTree = "<group>"; };
+		ECD556781FA217DF00D7DB1B /* LJRankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJRankModel.swift; sourceTree = "<group>"; };
+		ECD5567A1FA217F900D7DB1B /* LJWeeklyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeeklyModel.swift; sourceTree = "<group>"; };
 		ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselView.swift; sourceTree = "<group>"; };
 		ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJCarouselView.xib; sourceTree = "<group>"; };
 		ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDiscoveryCell.swift; sourceTree = "<group>"; };
@@ -263,6 +285,8 @@
 		ECE51D9A1FA02F68000533A1 /* LJCarouselModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselModel.swift; sourceTree = "<group>"; };
 		ECE51D9D1FA034DF000533A1 /* LJCarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselViewModel.swift; sourceTree = "<group>"; };
 		ECE51D9F1FA034F5000533A1 /* LJDiscoveryContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDiscoveryContentViewModel.swift; sourceTree = "<group>"; };
+		ECE51DA31FA1AB8E000533A1 /* LJGiftAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJGiftAnimationController.swift; sourceTree = "<group>"; };
+		ECE51DA91FA1AE48000533A1 /* LJSubrankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJSubrankViewController.swift; sourceTree = "<group>"; };
 		F579E90E35C8EB4D74D64261 /* Pods-clientSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clientSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-clientSocket/Pods-clientSocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -394,6 +418,7 @@
 				9705CAAB1F56555000A197BA /* TestSwiftController.swift */,
 				9705CAAC1F56555000A197BA /* ViewController.swift */,
 				EC2C24B11FA0232300605058 /* LJPageTestController.swift */,
+				ECE51DA31FA1AB8E000533A1 /* LJGiftAnimationController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -469,6 +494,10 @@
 		972BD7121F3226EF001C6172 /* Rank */ = {
 			isa = PBXGroup;
 			children = (
+				ECE51DA81FA1AD73000533A1 /* Model */,
+				ECE51DA71FA1AD6B000533A1 /* Controller */,
+				ECE51DA61FA1AD62000533A1 /* View */,
+				ECE51DA51FA1AD59000533A1 /* ViewModel */,
 				972BD7131F3226F0001C6172 /* LJRankController.swift */,
 			);
 			path = Rank;
@@ -768,6 +797,45 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		ECE51DA51FA1AD59000533A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECD556761FA2179500D7DB1B /* LJDetailRankViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ECE51DA61FA1AD62000533A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECB705861FA20D9600BB03DB /* LJDetailRankViewCell.swift */,
+				ECB705871FA20D9600BB03DB /* LJDetailRankViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECE51DA71FA1AD6B000533A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECE51DA91FA1AE48000533A1 /* LJSubrankViewController.swift */,
+				ECD556721FA2160100D7DB1B /* LJNormalRankViewController.swift */,
+				ECD556741FA2161300D7DB1B /* LJWeekrankViewController.swift */,
+				ECB705821FA20A3C00BB03DB /* LJDetailRankViewController.swift */,
+				ECD556701FA213AC00D7DB1B /* LJWeeklyRankViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECE51DA81FA1AD73000533A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECB705841FA20AE900BB03DB /* LJRankType.swift */,
+				ECD556781FA217DF00D7DB1B /* LJRankModel.swift */,
+				ECD5567A1FA217F900D7DB1B /* LJWeeklyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -918,6 +986,7 @@
 				975F293E1F3867FA0049B848 /* EmoticonView.xib in Resources */,
 				972E1FCA1F57E3CF0029876E /* IMMessage.proto in Resources */,
 				EC6D78421F9EDF6E001F6513 /* LJMineCell.xib in Resources */,
+				ECB705891FA20D9600BB03DB /* LJDetailRankViewCell.xib in Resources */,
 				ECE51D941FA02AFF000533A1 /* LJCarouselView.xib in Resources */,
 				97C679A41F4FF53F0045CB59 /* QHSohuGifSort.plist in Resources */,
 			);
@@ -1093,15 +1162,19 @@
 				9705CAB51F56562700A197BA /* GiftViewCell.swift in Sources */,
 				9732B04E1F3C292700C26CCE /* Shakeable.swift in Sources */,
 				972BD7141F3226F0001C6172 /* LJRankController.swift in Sources */,
+				ECB705831FA20A3C00BB03DB /* LJDetailRankViewController.swift in Sources */,
 				9705CAAE1F56555000A197BA /* ViewController.swift in Sources */,
 				972E1FC01F56B93D0029876E /* NibLoadable.swift in Sources */,
 				972E1FCC1F57E3CF0029876E /* LJSocket.swift in Sources */,
+				ECD556731FA2160100D7DB1B /* LJNormalRankViewController.swift in Sources */,
+				ECE51DAA1FA1AE48000533A1 /* LJSubrankViewController.swift in Sources */,
 				972E1FD01F57E3CF0029876E /* yudpsocket.c in Sources */,
 				972E1FCE1F57E3CF0029876E /* ytcpsocket.c in Sources */,
 				972BD7001F3222BD001C6172 /* LJAnchorController.swift in Sources */,
 				972E1FEF1F5ACC9F0029876E /* LJGiftContainerView.swift in Sources */,
 				9705CA9F1F555E5300A197BA /* LJChatContentView.swift in Sources */,
 				EC6D78481F9F0C23001F6513 /* LJSettingsSectionModel.swift in Sources */,
+				ECB705881FA20D9600BB03DB /* LJDetailRankViewCell.swift in Sources */,
 				9705CAA71F5650F400A197BA /* LJGiftListView.swift in Sources */,
 				EC2C24AF1F9F1FB300605058 /* LJSettingsViewController.swift in Sources */,
 				972BD7111F3226E6001C6172 /* LJMineController.swift in Sources */,
@@ -1115,6 +1188,8 @@
 				978F90E11F273614002624BE /* LJPageStyle.swift in Sources */,
 				97C8FA5B1F34201A008025BC /* LJPageCollectionLayout.swift in Sources */,
 				9705CAB01F56557300A197BA /* LJGiftController.swift in Sources */,
+				ECD556751FA2161300D7DB1B /* LJWeekrankViewController.swift in Sources */,
+				ECE51DA41FA1AB8E000533A1 /* LJGiftAnimationController.swift in Sources */,
 				97C8FA551F33001E008025BC /* UIImageView-Extension.swift in Sources */,
 				97C8FA591F340093008025BC /* LJPageCollectionView.swift in Sources */,
 				ECE51D961FA02E22000533A1 /* LJDiscoveryCell.swift in Sources */,
@@ -1125,13 +1200,17 @@
 				9705CAA11F55621B00A197BA /* LJChatContentCell.swift in Sources */,
 				978F90DF1F273319002624BE /* LJContentView.swift in Sources */,
 				9705CAB81F56563C00A197BA /* LJGiftViewModel.swift in Sources */,
+				ECB705851FA20AE900BB03DB /* LJRankType.swift in Sources */,
 				97CC22D31F62669D0066CF9B /* LJGiftAnimationModel.swift in Sources */,
 				9705CAC21F56695800A197BA /* LJEmoticonViewCell.swift in Sources */,
 				EC2C24B21FA0232300605058 /* LJPageTestController.swift in Sources */,
+				ECD556791FA217DF00D7DB1B /* LJRankModel.swift in Sources */,
+				ECD556711FA213AC00D7DB1B /* LJWeeklyRankViewController.swift in Sources */,
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				9705CAC61F568FC300A197BA /* LJEmoticonPackage.swift in Sources */,
 				971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */,
 				EC6D78441F9EEA58001F6513 /* LJMineHeaderView.swift in Sources */,
+				ECD5567B1FA217F900D7DB1B /* LJWeeklyModel.swift in Sources */,
 				972E1FCF1F57E3CF0029876E /* ytcpsocket.swift in Sources */,
 				97C679A01F4FCE110045CB59 /* LJAttributeStringGenerator.swift in Sources */,
 				9705CAC81F56906B00A197BA /* LJEmoticonViewModel.swift in Sources */,
@@ -1142,6 +1221,7 @@
 				978F90DD1F2732FA002624BE /* LJTitleView.swift in Sources */,
 				ECE51D9B1FA02F68000533A1 /* LJCarouselModel.swift in Sources */,
 				97C8FA531F32F1FB008025BC /* HomeViewCell.swift in Sources */,
+				ECD556771FA2179500D7DB1B /* LJDetailRankViewModel.swift in Sources */,
 				972E1FE91F5ACC1C0029876E /* LJGiftChannelView.swift in Sources */,
 				972BD6FE1F321D16001C6172 /* const.swift in Sources */,
 				9705CAB21F56561400A197BA /* Requestable.swift in Sources */,
