@@ -35,7 +35,7 @@ class LJDetailRankViewController: LJSubrankViewController {
 
 extension LJDetailRankViewController {
     fileprivate func setupUI() {
-        tableView.frame = view.bounds
+        tableView.frame = CGRect(x: 0, y: 0, width: kDeviceWidth, height: kDeviceHeight-kNavigationBarHeight-kStatusBarHeight-kTabBarHeight-35)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.rowHeight = 50
         view.addSubview(tableView)
@@ -49,7 +49,7 @@ extension LJDetailRankViewController {
         
     }
     
-    fileprivate func loadData() {
+    func loadData() {
         detailRankVM.loadDetailRankData(rankType) {
             self.tableView.reloadData()
         }
@@ -62,7 +62,8 @@ extension LJDetailRankViewController: UITableViewDataSource, UITableViewDelegate
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kLJDetailRankViewCell) as! LJDetailRankViewCell
-        
+        cell.rankNum = indexPath.row
+        cell.rankModel = detailRankVM.rankModels[indexPath.row]
         return cell
     }
 }
