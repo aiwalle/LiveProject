@@ -44,8 +44,11 @@ class LJGiftChannelView: UIView, NibLoadable {
             guard let giftModel = giftModel else {
                 return
             }
+            // work
+            var imageStr = giftModel.senderURL
+            imageStr = "wallelj"
             
-            iconImageView.image = UIImage(named: giftModel.senderURL)
+            iconImageView.image = UIImage(named: imageStr)
             senderLabel.text = giftModel.senderName
             giftDescLabel.text = "送出礼物：【\(giftModel.giftName)】"
             giftImageView.setImage(giftModel.giftURL)

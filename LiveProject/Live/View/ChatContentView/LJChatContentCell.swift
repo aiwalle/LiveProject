@@ -17,6 +17,8 @@ class LJChatContentCell: UITableViewCell {
         contentLabel = UILabel()
         contentLabel.font = UIFont.systemFont(ofSize: 15)
         self.contentView.addSubview(contentLabel)
+        self.backgroundColor = UIColor.clear
+//        self.contentView.backgroundColor = UIColor.clear
         
     }
     

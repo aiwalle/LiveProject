@@ -61,6 +61,9 @@ extension LJAnchorController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = HomeViewCell.cellWithCollectionView(collectionView, indexPath: indexPath as NSIndexPath)
         cell.anchorModel = homeViewModel.anchorModels[indexPath.item]
+        if indexPath.item == homeViewModel.anchorModels.count - 1 {
+            loadData(index: homeViewModel.anchorModels.count)
+        }
         return cell
     }
 }

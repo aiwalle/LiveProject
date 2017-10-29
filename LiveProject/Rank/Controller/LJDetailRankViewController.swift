@@ -35,6 +35,7 @@ class LJDetailRankViewController: LJSubrankViewController {
 
 extension LJDetailRankViewController {
     fileprivate func setupUI() {
+        // 这里高度设定不够灵活
         tableView.frame = CGRect(x: 0, y: 0, width: kDeviceWidth, height: kDeviceHeight-kNavigationBarHeight-kStatusBarHeight-kTabBarHeight-35)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.rowHeight = 50

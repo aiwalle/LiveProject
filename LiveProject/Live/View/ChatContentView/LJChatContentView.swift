@@ -66,15 +66,3 @@ extension LJChatContentView : UITableViewDataSource {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IJKMediaFramework
 
 private let kChatToolsViewHeight : CGFloat = 44
 private let kChatContentViewHeight : CGFloat = 200
@@ -24,10 +25,17 @@ class LJRoomController: UIViewController, Emitterable {
     fileprivate lazy var chatContentView : LJChatContentView = LJChatContentView()
     fileprivate lazy var chatToolsView : LJChatToolsView = LJChatToolsView()
     fileprivate lazy var giftListView : LJGiftListView = LJGiftListView.loadFromNib()
+    // home: 192.168.0.181
+    // comp: 172.16.25.101
+    fileprivate lazy var socket = LJSocket(addr: "192.168.0.181", port: 9999)
     
-    fileprivate lazy var socket = LJSocket(addr: "172.16.25.101", port: 9999)
+    fileprivate lazy var giftContainerView: LJGiftContainerView = LJGiftContainerView(frame: CGRect(x: 0, y: 100, width: 250, height: 100))
     
     fileprivate var beatTimer : Timer!
+    
+    fileprivate lazy var roomVM: LJRoomViewModel = LJRoomViewModel()
+    
+    fileprivate var player: IJKFFMoviePlayerController?
     
     var anchor : AnchorModel?
     
@@ -48,9 +56,32 @@ class LJRoomController: UIViewController, Emitterable {
             socket.delegate = self
         }
         
+        loadRoomInfo()
+        
+        setupAnchorInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        socket.sendLeaveRoom()
+        player?.shutdown()
+    }
     
+    deinit {
+        beatTimer.invalidate()
+        beatTimer = nil
+        NotificationCenter.default.removeObserver(self)
+    }
     
 }
 
@@ -60,6 +91,8 @@ extension  LJRoomController {
         setupBlurView()
         
         setupBottomView()
+        
+        view.addSubview(giftContainerView)
     }
     
     fileprivate func setupBlurView() {
@@ -73,7 +106,7 @@ extension  LJRoomController {
     
     fileprivate func setupBottomView() {
         chatContentView.frame = CGRect(x: 0, y: view.bounds.height - 44 - kChatContentViewHeight, width: view.bounds.width, height: kChatContentViewHeight)
-        chatContentView.backgroundColor = UIColor.red
+//        chatContentView.backgroundColor = UIColor.red
         chatContentView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
         view.addSubview(chatContentView)
         
@@ -89,6 +122,42 @@ extension  LJRoomController {
         giftListView.delegate = self
     }
     
+}
+
+
+extension LJRoomController {
+    fileprivate func loadRoomInfo() {
+        if let roomid = anchor?.roomid, let uid = anchor?.uid {
+            print(roomid, uid)
+            roomVM.loadLiveURL(roomid, uid, {
+                self.setupDisplayView()
+            })
+        }
+    }
+    
+    fileprivate func setupDisplayView() {
+        IJKFFMoviePlayerController.setLogReport(false)
+        let url = URL(string: roomVM.liveURL)
+        player = IJKFFMoviePlayerController(contentURL: url, with: nil)
+        if anchor?.push == 1 {
+            player?.view.frame = CGRect(x: 0, y: 150, width: kDeviceWidth, height: kDeviceWidth * 3 / 4)
+        } else {
+            player?.view.frame = UIScreen.main.bounds
+        }
+        bgImageView.insertSubview((player?.view)!, at: 1)
+        
+        DispatchQueue.global().async {
+            self.player?.prepareToPlay()
+            self.player?.play()
+        }
+    }
+    
+    fileprivate func setupAnchorInfo() {
+        bgImageView.setImage(anchor?.pic74)
+        nickNameLabel.text = anchor?.name
+        roomNumberLabel.text = "房间号：\(anchor!.roomid)"
+        iconImageView.setImage(anchor?.pic51)
+    }
 }
 
 extension LJRoomController {
@@ -184,6 +253,9 @@ extension LJRoomController : LJSocketDelegate {
     func socket(_ socket: LJSocket, giftMsg: GiftMessage) {
         let font = UIFont.systemFont(ofSize: 15)
         chatContentView.insertMsg(LJAttributeStringGenerator.generateGiftMessage(giftMsg.user.name, giftMsg.giftname, giftMsg.giftUrl, font.lineHeight))
+        
+        let gift = LJGiftAnimationModel(senderName: giftMsg.user.name, senderURL: giftMsg.user.iconUrl, giftName: giftMsg.giftname, giftURL: giftMsg.giftUrl)
+        giftContainerView.showGiftModel(gift)
     }
 }
 

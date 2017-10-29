@@ -126,6 +126,7 @@
 		ECB705851FA20AE900BB03DB /* LJRankType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB705841FA20AE900BB03DB /* LJRankType.swift */; };
 		ECB705881FA20D9600BB03DB /* LJDetailRankViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB705861FA20D9600BB03DB /* LJDetailRankViewCell.swift */; };
 		ECB705891FA20D9600BB03DB /* LJDetailRankViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB705871FA20D9600BB03DB /* LJDetailRankViewCell.xib */; };
+		ECCCE1AB1FA31A4F00F708DA /* LJRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCCE1AA1FA31A4F00F708DA /* LJRoomViewModel.swift */; };
 		ECD556711FA213AC00D7DB1B /* LJWeeklyRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556701FA213AC00D7DB1B /* LJWeeklyRankViewController.swift */; };
 		ECD556731FA2160100D7DB1B /* LJNormalRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556721FA2160100D7DB1B /* LJNormalRankViewController.swift */; };
 		ECD556751FA2161300D7DB1B /* LJWeekrankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556741FA2161300D7DB1B /* LJWeekrankViewController.swift */; };
@@ -135,6 +136,10 @@
 		ECD556821FA2D79200D7DB1B /* LJWeeklyRankViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556801FA2D79200D7DB1B /* LJWeeklyRankViewCell.swift */; };
 		ECD556831FA2D79200D7DB1B /* LJWeeklyRankViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD556811FA2D79200D7DB1B /* LJWeeklyRankViewCell.xib */; };
 		ECD556851FA2D9CF00D7DB1B /* LJWeeklyRankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD556841FA2D9CF00D7DB1B /* LJWeeklyRankViewModel.swift */; };
+		ECD556D51FA3068200D7DB1B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD556D41FA3068100D7DB1B /* libstdc++.tbd */; };
+		ECD556D71FA3068E00D7DB1B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD556D61FA3068E00D7DB1B /* libz.tbd */; };
+		ECD556D91FA3069D00D7DB1B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD556D81FA3069D00D7DB1B /* libsqlite3.0.tbd */; };
+		ECD556DC1FA30E7400D7DB1B /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD556DB1FA30E7300D7DB1B /* IJKMediaFramework.framework */; };
 		ECE51D921FA02AF3000533A1 /* LJCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */; };
 		ECE51D941FA02AFF000533A1 /* LJCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */; };
 		ECE51D961FA02E22000533A1 /* LJDiscoveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */; };
@@ -275,6 +280,7 @@
 		ECB705841FA20AE900BB03DB /* LJRankType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJRankType.swift; sourceTree = "<group>"; };
 		ECB705861FA20D9600BB03DB /* LJDetailRankViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDetailRankViewCell.swift; sourceTree = "<group>"; };
 		ECB705871FA20D9600BB03DB /* LJDetailRankViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJDetailRankViewCell.xib; sourceTree = "<group>"; };
+		ECCCE1AA1FA31A4F00F708DA /* LJRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJRoomViewModel.swift; sourceTree = "<group>"; };
 		ECD556701FA213AC00D7DB1B /* LJWeeklyRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeeklyRankViewController.swift; sourceTree = "<group>"; };
 		ECD556721FA2160100D7DB1B /* LJNormalRankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJNormalRankViewController.swift; sourceTree = "<group>"; };
 		ECD556741FA2161300D7DB1B /* LJWeekrankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeekrankViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +290,10 @@
 		ECD556801FA2D79200D7DB1B /* LJWeeklyRankViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeeklyRankViewCell.swift; sourceTree = "<group>"; };
 		ECD556811FA2D79200D7DB1B /* LJWeeklyRankViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJWeeklyRankViewCell.xib; sourceTree = "<group>"; };
 		ECD556841FA2D9CF00D7DB1B /* LJWeeklyRankViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJWeeklyRankViewModel.swift; sourceTree = "<group>"; };
+		ECD556D41FA3068100D7DB1B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		ECD556D61FA3068E00D7DB1B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		ECD556D81FA3069D00D7DB1B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		ECD556DB1FA30E7300D7DB1B /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		ECE51D911FA02AF3000533A1 /* LJCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJCarouselView.swift; sourceTree = "<group>"; };
 		ECE51D931FA02AFF000533A1 /* LJCarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LJCarouselView.xib; sourceTree = "<group>"; };
 		ECE51D951FA02E22000533A1 /* LJDiscoveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJDiscoveryCell.swift; sourceTree = "<group>"; };
@@ -316,6 +326,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD556D91FA3069D00D7DB1B /* libsqlite3.0.tbd in Frameworks */,
+				ECD556D71FA3068E00D7DB1B /* libz.tbd in Frameworks */,
+				ECD556D51FA3068200D7DB1B /* libstdc++.tbd in Frameworks */,
+				ECD556DC1FA30E7400D7DB1B /* IJKMediaFramework.framework in Frameworks */,
 				8E07CB424B84476A34193FCC /* Pods_LiveProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +340,9 @@
 		193BD182C53D641D2E90F6B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ECD556D81FA3069D00D7DB1B /* libsqlite3.0.tbd */,
+				ECD556D61FA3068E00D7DB1B /* libz.tbd */,
+				ECD556D41FA3068100D7DB1B /* libstdc++.tbd */,
 				005E16C739F13FA2F6FCEB9F /* Pods_LiveProject.framework */,
 				39EAA0890542C5E9A575A15D /* Pods_clientSocket.framework */,
 			);
@@ -373,6 +390,7 @@
 			children = (
 				9705CAB71F56563C00A197BA /* LJGiftViewModel.swift */,
 				9705CAC71F56906B00A197BA /* LJEmoticonViewModel.swift */,
+				ECCCE1AA1FA31A4F00F708DA /* LJRoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -432,6 +450,7 @@
 		972BD6F41F3218BB001C6172 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ECD556DB1FA30E7300D7DB1B /* IJKMediaFramework.framework */,
 				9747D0CD1F53A557009CFB21 /* timg.gif */,
 				97C679A11F4FF53F0045CB59 /* QHNormalEmotionSort.plist */,
 				97C679A21F4FF53F0045CB59 /* QHSohuGifSort.plist */,
@@ -1221,6 +1240,7 @@
 				972BD6FA1F321A66001C6172 /* BaseModel.swift in Sources */,
 				9705CAC61F568FC300A197BA /* LJEmoticonPackage.swift in Sources */,
 				971196441F3B3603005D4FFF /* LoginViewController.swift in Sources */,
+				ECCCE1AB1FA31A4F00F708DA /* LJRoomViewModel.swift in Sources */,
 				EC6D78441F9EEA58001F6513 /* LJMineHeaderView.swift in Sources */,
 				ECD5567B1FA217F900D7DB1B /* LJWeeklyModel.swift in Sources */,
 				972E1FCF1F57E3CF0029876E /* ytcpsocket.swift in Sources */,
@@ -1459,6 +1479,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U34P9L9V3V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LiveProject/Resource",
+				);
 				INFOPLIST_FILE = LiveProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walle.LiveProject;
@@ -1474,6 +1498,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U34P9L9V3V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LiveProject/Resource",
+				);
 				INFOPLIST_FILE = LiveProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walle.LiveProject;
